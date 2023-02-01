@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-01T02:06:58.154Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="yyro24XOdCsXLSU_H26B" version="20.8.14" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-01T02:12:22.473Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="ko94i7UH5NpRShmR49kE" version="20.8.14" type="github" pages="2">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -322,7 +322,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-1" value="&lt;p class=&quot;MsoNormal&quot; style=&quot;font-size: 17px;&quot;&gt;使用记录数据操作流程：&amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;应用日志-&amp;gt;logStash-&amp;gt;HDFS-&amp;gt;sparkSQL-&amp;gt;hive-&amp;gt;sparkSQL-&amp;gt;mysql-&amp;gt;运营分析。&lt;/span&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;fontSize=17;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry y="-1160" width="840" height="60" as="geometry" />
+          <mxGeometry x="20" y="-1169" width="840" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-31" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="600" y="-1050" width="500" height="210" as="geometry" />
@@ -373,7 +373,7 @@
           <mxGeometry x="285" y="87.17948717948718" width="180" height="30.512820512820515" as="geometry" />
         </mxCell>
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-50" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="320" y="-620" width="510" height="560" as="geometry" />
+          <mxGeometry x="360" y="-390" width="510" height="560" as="geometry" />
         </mxCell>
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-34" value="MySQL" style="rounded=0;whiteSpace=wrap;html=1;fontSize=22;horizontal=1;verticalAlign=top;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
           <mxGeometry width="510" height="560" as="geometry" />
@@ -381,7 +381,7 @@
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-35" value="yyfx" style="rounded=0;whiteSpace=wrap;html=1;fontSize=19;horizontal=1;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
           <mxGeometry x="10" y="50" width="230" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="eUsfLuXrdPTU6Zo4dA0c-36" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;licence_use&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
+        <mxCell id="eUsfLuXrdPTU6Zo4dA0c-36" value="app_info" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
           <mxGeometry x="40" y="100" width="180" height="35" as="geometry" />
         </mxCell>
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-37" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;licence_use_week&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
@@ -393,7 +393,7 @@
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-39" value="&lt;div style=&quot;text-align: left;&quot;&gt;market_players&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
           <mxGeometry x="40" y="275" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="eUsfLuXrdPTU6Zo4dA0c-40" value="&lt;div style=&quot;text-align: left;&quot;&gt;app_info&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
+        <mxCell id="eUsfLuXrdPTU6Zo4dA0c-40" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;licence_use&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
           <mxGeometry x="40" y="335" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-43" value="&lt;div style=&quot;text-align: left;&quot;&gt;licence_use_company&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
@@ -410,6 +410,14 @@
         </mxCell>
         <mxCell id="eUsfLuXrdPTU6Zo4dA0c-47" value="&lt;div style=&quot;text-align: left;&quot;&gt;query_log&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" parent="eUsfLuXrdPTU6Zo4dA0c-50" vertex="1">
           <mxGeometry x="295" y="100" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="JtnIAONKJIrSGNDn3wCX-1" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=17;" edge="1" parent="1" source="eUsfLuXrdPTU6Zo4dA0c-23" target="eUsfLuXrdPTU6Zo4dA0c-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JtnIAONKJIrSGNDn3wCX-2" value="app_center_mysql&lt;br&gt;APP统计" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=17;" vertex="1" connectable="0" parent="JtnIAONKJIrSGNDn3wCX-1">
+          <mxGeometry x="0.3298" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
