@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-07T03:10:23.847Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="QFPzXBXVYEl_G50LGJdL" version="20.8.17" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-07T03:14:57.312Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="yTEAo2mXuX1vNE9tZmoM" version="20.8.17" type="github" pages="2">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -891,6 +891,9 @@
         <mxCell id="h7imEG4-RPFQQV8rX1tC-26" value="&lt;div style=&quot;text-align: left;&quot;&gt;license_receive_hive&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="860" y="1010" width="190" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="xEwf0O-MvUgcKREUFzJi-47" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="h7imEG4-RPFQQV8rX1tC-28" target="xEwf0O-MvUgcKREUFzJi-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="h7imEG4-RPFQQV8rX1tC-28" value="&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;MySQL&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;license_receive&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" parent="1" vertex="1">
           <mxGeometry x="1193" y="1040" width="124" height="60" as="geometry" />
         </mxCell>
@@ -923,6 +926,9 @@
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;market_players_hive&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="860" y="1207" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xEwf0O-MvUgcKREUFzJi-48" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="xEwf0O-MvUgcKREUFzJi-5" target="xEwf0O-MvUgcKREUFzJi-46">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-5" value="&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;MySQL&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;market_players&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="1">
           <mxGeometry x="1193" y="1257" width="124" height="60" as="geometry" />
@@ -1031,6 +1037,15 @@
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-43" value="Hive&lt;br&gt;real_name" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="1">
           <mxGeometry x="570" y="1790" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xEwf0O-MvUgcKREUFzJi-50" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="xEwf0O-MvUgcKREUFzJi-46" target="xEwf0O-MvUgcKREUFzJi-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xEwf0O-MvUgcKREUFzJi-46" value="&lt;div style=&quot;text-align: left;&quot;&gt;wfwsignlicense&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="1157" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xEwf0O-MvUgcKREUFzJi-49" value="&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;达梦&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;SIGNLICENSE.WFWSIGNLICENSE&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1890" y="1147" width="250" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
