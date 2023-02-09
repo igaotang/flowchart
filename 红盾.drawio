@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-09T07:50:08.936Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="aQZ-b8s-sdO3RtIUhI6Y" version="20.8.18" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-09T07:52:04.751Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="y42iJvhPt_apq80b_aB3" version="20.8.18" type="github" pages="2">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -968,15 +968,6 @@
         <mxCell id="xEwf0O-MvUgcKREUFzJi-12" value="执照下载日志" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="xEwf0O-MvUgcKREUFzJi-14" vertex="1">
           <mxGeometry x="20" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="xEwf0O-MvUgcKREUFzJi-15" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="-10" y="1210" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="h7imEG4-RPFQQV8rX1tC-35" value="/user/logstash/bizlog-*" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;fontSize=14;" parent="xEwf0O-MvUgcKREUFzJi-15" vertex="1">
-          <mxGeometry width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xEwf0O-MvUgcKREUFzJi-13" value="市场主体业务操作日志" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="xEwf0O-MvUgcKREUFzJi-15" vertex="1">
-          <mxGeometry x="30" width="120" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-16" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-10" y="760" width="180" height="40" as="geometry" />
         </mxCell>
@@ -1149,6 +1140,15 @@
         </mxCell>
         <mxCell id="Agi0m2Bdz71Y0sU2h22X-22" value="group_licence_use" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="855" y="575" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2C3xvkMA8jlJhs2-aAn8-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-10" y="1210" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h7imEG4-RPFQQV8rX1tC-35" value="/user/logstash/bizlog-*" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.layered_rect;dx=10;outlineConnect=0;whiteSpace=wrap;fontSize=14;" parent="2C3xvkMA8jlJhs2-aAn8-1" vertex="1">
+          <mxGeometry width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xEwf0O-MvUgcKREUFzJi-13" value="市场主体业务操作日志(新增、注销、变更、撤销等)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="2C3xvkMA8jlJhs2-aAn8-1" vertex="1">
+          <mxGeometry x="10" width="150" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
