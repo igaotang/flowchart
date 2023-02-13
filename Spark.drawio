@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-13T07:18:49.102Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="gXBsmal7SnBtUQZMzLuV" version="20.8.19" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-13T07:28:10.927Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="4m2C7kj5tZIQ1puxPsND" version="20.8.19" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -12,6 +12,9 @@
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-1" value="SparkSession#sql(String)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="50" y="30" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="THCTk6hH6egYFEfsFXks-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-4" target="THCTk6hH6egYFEfsFXks-17">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-4" value="DataSet#&lt;br&gt;ofRow(SparkSession,&amp;nbsp;LogicalPlan)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="40" y="440" width="230" height="40" as="geometry" />
@@ -38,6 +41,9 @@
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-12" value="SqlBaseParser#singleStatement" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="531" y="210" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="THCTk6hH6egYFEfsFXks-17" value="SessionState#executePlan(LogicalPlan&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="530" width="260" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
