@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T01:29:12.273Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="UXZTcemQL0CSwm2ibiEG" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T01:31:17.850Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="H_W7Of9UHcFok85nHSA4" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -114,6 +114,12 @@
         </mxCell>
         <mxCell id="xvGSpYOVI_oOir4ocMuj-1" value="val lexer = new SqlBaseLexer(new UpperCaseCharStream(CharStreams.fromString(command)))&lt;br&gt;val tokenStream = new CommonTokenStream(lexer)&lt;br&gt;new SqlBaseParser(tokenStream)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="170" y="335" width="620" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-6" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="xvGSpYOVI_oOir4ocMuj-5" target="THCTk6hH6egYFEfsFXks-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-5" value="使用事先定义好的 Rule 以及 Catalog 等信息对 Unresolved LogicalPlan 进行 transform。&lt;br&gt;Catalog 主要用于各种函数资源信息和元数据信息（数据库、数据表、数据视图、数据分区与函数等）的统一管理" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="330" y="870" width="340" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
