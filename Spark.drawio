@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T03:34:29.116Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="H_lY3W_4K1TZ3zjhUXSz" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T06:50:49.205Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="ABrSKVE4I4km0kOEPiMY" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -109,9 +109,9 @@
             <mxPoint x="180" y="1240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-2" value="执行具体的Action" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Hme6o7wAtb_QXtmtZKTd-1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-2" value="执行具体的Action时&lt;br&gt;触发逻辑计划的优化，并最终转换成到物理计划" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="Hme6o7wAtb_QXtmtZKTd-1" vertex="1" connectable="0">
           <mxGeometry x="-0.5588" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-2" y="-15" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xvGSpYOVI_oOir4ocMuj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xvGSpYOVI_oOir4ocMuj-1" target="THCTk6hH6egYFEfsFXks-9" edge="1">
@@ -126,97 +126,97 @@
         <mxCell id="xvGSpYOVI_oOir4ocMuj-5" value="使用事先定义好的 Rule 以及 Catalog 等信息对 Unresolved LogicalPlan 进行 transform。&lt;br&gt;Catalog 主要用于各种函数资源信息和元数据信息（数据库、数据表、数据视图、数据分区与函数等）的统一管理。&lt;br&gt;&lt;div&gt;多个性质类似的 Rule 组成一个 Batch，比如上面名为 Hints 的 Batch就是由很多个 Hints Rule 组成；而多个 Batch 构成一个 batches。这些 batches 会由 RuleExecutor 执行，先按一个一个 Batch 顺序执行，然后对 Batch 里面的每个 Rule 顺序执行。每个 Batch 会执行一次（Once）或多次（FixedPoint，由&lt;/div&gt;&lt;div&gt;spark.sql.optimizer.maxIterations 参数决定）&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="330" y="790" width="560" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-1" target="dJa-XMbD3ppQLrqUtmth-5">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dJa-XMbD3ppQLrqUtmth-1" target="dJa-XMbD3ppQLrqUtmth-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-1" value="QueryExecution#executedPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-1" value="QueryExecution#executedPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="65" y="1330" width="205" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-3" target="dJa-XMbD3ppQLrqUtmth-5">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-3" target="dJa-XMbD3ppQLrqUtmth-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-9" value="SparkPlan&lt;br&gt;即为PhysicalPlan" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-8">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-9" value="SparkPlan&lt;br&gt;即为PhysicalPlan" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-8" vertex="1" connectable="0">
           <mxGeometry x="0.0215" y="15" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-3" value="&lt;div&gt;lazy val sparkPlan: SparkPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; SparkSession.setActiveSession(sparkSession)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // TODO: We use next(), i.e. take the first plan returned by the planner, here for now,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;but we will implement to choose the best plan.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; planner.plan(ReturnAnswer(optimizedPlan)).next()&lt;/div&gt;&lt;div&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-3" value="&lt;div&gt;lazy val sparkPlan: SparkPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; SparkSession.setActiveSession(sparkSession)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // TODO: We use next(), i.e. take the first plan returned by the planner, here for now,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;but we will implement to choose the best plan.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; planner.plan(ReturnAnswer(optimizedPlan)).next()&lt;/div&gt;&lt;div&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="330" y="1310" width="375" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-5" target="dJa-XMbD3ppQLrqUtmth-23">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-5" target="dJa-XMbD3ppQLrqUtmth-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-5" value="QueryExecution#&lt;br&gt;prepareForExecution(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-5" value="QueryExecution#&lt;br&gt;prepareForExecution(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1440" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-11" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.997;entryY=0.571;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-10" target="dJa-XMbD3ppQLrqUtmth-3">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-11" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.997;entryY=0.571;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-10" target="dJa-XMbD3ppQLrqUtmth-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-12" value="Optimizer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-11">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-12" value="Optimizer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-11" vertex="1" connectable="0">
           <mxGeometry x="0.4033" y="-5" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-10" value="lazy val optimizedPlan: LogicalPlan = sparkSession.sessionState.optimizer.execute(withCachedData)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-10" value="lazy val optimizedPlan: LogicalPlan = sparkSession.sessionState.optimizer.execute(withCachedData)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="827" y="1320" width="400" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-13" target="dJa-XMbD3ppQLrqUtmth-3">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-13" target="dJa-XMbD3ppQLrqUtmth-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-15" value="planner" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-14">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-15" value="planner" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-14" vertex="1" connectable="0">
           <mxGeometry x="0.3895" y="7" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-13" value="SparkPlanner" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-13" value="SparkPlanner" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="667.75" y="1501.69" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-17" target="dJa-XMbD3ppQLrqUtmth-13">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-17" target="dJa-XMbD3ppQLrqUtmth-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-17" value="SparkStrategies" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-17" value="SparkStrategies" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="667.75" y="1561.69" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-22" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-18" target="dJa-XMbD3ppQLrqUtmth-17">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-22" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-18" target="dJa-XMbD3ppQLrqUtmth-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-18" value="QueryPlanner&lt;br&gt;把一个LogicalPlan经过处理后转换为一系列PhysicalPlan&lt;br&gt;调用next()选择第一个PhysicalPlan返回，即认为第一个PhysicalPlan是最优的" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-18" value="QueryPlanner&lt;br&gt;把一个LogicalPlan经过处理后转换为一系列PhysicalPlan&lt;br&gt;调用next()选择第一个PhysicalPlan返回，即认为第一个PhysicalPlan是最优的" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="620" y="1621.69" width="205.5" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-23" target="dJa-XMbD3ppQLrqUtmth-28">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-23" target="dJa-XMbD3ppQLrqUtmth-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-31" value="全代码生成" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-30">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-31" value="全代码生成" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-30" vertex="1" connectable="0">
           <mxGeometry x="0.2381" y="-2" relative="1" as="geometry">
             <mxPoint x="2" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-23" value="preparations.foldLeft(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-23" value="preparations.foldLeft(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1754" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.708;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF0000;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-25" target="dJa-XMbD3ppQLrqUtmth-23">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.708;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF0000;dashed=1;dashPattern=12 12;" parent="1" source="dJa-XMbD3ppQLrqUtmth-25" target="dJa-XMbD3ppQLrqUtmth-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-27" value="preparations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-26">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-27" value="preparations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-26" vertex="1" connectable="0">
           <mxGeometry x="-0.1244" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-25" value="&lt;div&gt;Seq(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; PlanSubqueries(sparkSession),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; EnsureRequirements(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; CollapseCodegenStages(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseExchange(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseSubquery(sparkSession.sessionState.conf))&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-25" value="&lt;div&gt;Seq(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; PlanSubqueries(sparkSession),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; EnsureRequirements(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; CollapseCodegenStages(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseExchange(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseSubquery(sparkSession.sessionState.conf))&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="221.74" y="1580" width="383" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-28" target="dJa-XMbD3ppQLrqUtmth-32">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-28" target="dJa-XMbD3ppQLrqUtmth-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-35" value="如果支持代码生成则将PhysicalPlan&lt;br&gt;转变为WholeStageCodegenExec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-33">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-35" value="如果支持代码生成则将PhysicalPlan&lt;br&gt;转变为WholeStageCodegenExec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-33" vertex="1" connectable="0">
           <mxGeometry x="-0.28" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-28" value="CollapseCodegenStages" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-28" value="CollapseCodegenStages" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1840" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="45" y="1960" width="240" height="40" as="geometry" />
         </mxCell>
       </root>
