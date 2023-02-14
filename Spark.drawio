@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T08:00:04.916Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="OdL3effPPdk5Om7LrwE9" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T08:02:26.675Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="3ewm6KAnAsc1uGmXxYhJ" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="818" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1058" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -221,14 +221,6 @@
         <mxCell id="dJa-XMbD3ppQLrqUtmth-28" value="CollapseCodegenStages" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1840" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-33" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;dashed=1;dashPattern=1 2;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-32" target="OyspbbeXxSc23yl87xw1-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-34" value="执行编译" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OyspbbeXxSc23yl87xw1-33">
-          <mxGeometry x="0.2761" y="2" relative="1" as="geometry">
-            <mxPoint x="2" y="-13" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan&lt;br&gt;其在driver端生成，但此时并未执行编译过程，后面会在executor端执行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1960" width="242.5" height="80" as="geometry" />
         </mxCell>
@@ -236,7 +228,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-1" value="WholeStageCodegenExec#&lt;br&gt;doExecute" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="43.75" y="2110" width="240" height="40" as="geometry" />
+          <mxGeometry x="44.75" y="2133" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-2" target="OyspbbeXxSc23yl87xw1-7">
           <mxGeometry relative="1" as="geometry">
@@ -245,11 +237,11 @@
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-6" value="返回结果为元组&lt;br&gt;(CodegenContext, WholeStageCodegenExec&lt;br&gt;)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OyspbbeXxSc23yl87xw1-5">
           <mxGeometry x="-0.2667" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint y="4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-2" value="WholeStageCodegenExec#&lt;br&gt;doCodeGen&lt;br&gt;生成java代码" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="45" y="2200" width="240" height="50" as="geometry" />
+          <mxGeometry x="45" y="2217" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-7" target="OyspbbeXxSc23yl87xw1-25">
           <mxGeometry relative="1" as="geometry" />
@@ -319,6 +311,17 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="898" y="1516.69" as="sourcePoint" />
             <mxPoint x="772" y="1551.69" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-39" value="" style="edgeStyle=isometricEdgeStyle;endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="100" relative="1" as="geometry">
+            <mxPoint x="138.75" y="2118" as="sourcePoint" />
+            <mxPoint x="188.75" y="2048" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-40" value="Executor端执行编译" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OyspbbeXxSc23yl87xw1-39">
+          <mxGeometry x="-0.5588" y="-1" relative="1" as="geometry">
+            <mxPoint x="-2" y="-15" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
