@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T01:28:49.161Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="6C5b3r8Les8qW8Jy9yiO" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T01:29:12.273Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="UXZTcemQL0CSwm2ibiEG" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -54,14 +54,8 @@
         <mxCell id="THCTk6hH6egYFEfsFXks-19" value="AbstractSqlParser#parse(comand: String)(SqlBaseParser =&amp;gt; &lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 10.5pt; color: rgb(78, 128, 125);&quot;&gt;T&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="241.12" y="260" width="344.25" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="THCTk6hH6egYFEfsFXks-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.772;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=14;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="THCTk6hH6egYFEfsFXks-22" target="THCTk6hH6egYFEfsFXks-19" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="530" y="170" />
-              <mxPoint x="530" y="250" />
-              <mxPoint x="507" y="250" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-22" target="THCTk6hH6egYFEfsFXks-19">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-22" value="&lt;div&gt;parser =&amp;gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;astBuilder.visitSingleStatement(parser.singleStatement()) match {&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case plan: LogicalPlan =&amp;gt; plan&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case _ =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val position = Origin(None, None)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; throw new ParseException(Option(sqlText), &quot;Unsupported SQL statement&quot;, position, position)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;先用PredictionMode.SLL进行解析，&lt;/div&gt;&lt;div&gt;失败后再用PredictionMode.LL，&lt;/div&gt;&lt;div&gt;若仍然失败则抛出异常&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="640" y="55" width="390" height="230" as="geometry" />
