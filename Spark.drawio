@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T01:33:32.657Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="yA-U47p64228JGKrfqtU" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T02:10:00.957Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="IL_V2zALXvMqQhLNpyPg" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -48,13 +48,13 @@
         <mxCell id="THCTk6hH6egYFEfsFXks-17" value="SessionState#executePlan(LogicalPlan&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="25" y="725" width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xvGSpYOVI_oOir4ocMuj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-19" target="xvGSpYOVI_oOir4ocMuj-1">
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="THCTk6hH6egYFEfsFXks-19" target="xvGSpYOVI_oOir4ocMuj-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-19" value="AbstractSqlParser#parse(comand: String)(SqlBaseParser =&amp;gt; &lt;span style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 10.5pt; color: rgb(78, 128, 125);&quot;&gt;T&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="241.12" y="260" width="344.25" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xvGSpYOVI_oOir4ocMuj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-22" target="THCTk6hH6egYFEfsFXks-19">
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="THCTk6hH6egYFEfsFXks-22" target="THCTk6hH6egYFEfsFXks-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-22" value="&lt;div&gt;parser =&amp;gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;astBuilder.visitSingleStatement(parser.singleStatement()) match {&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case plan: LogicalPlan =&amp;gt; plan&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case _ =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val position = Origin(None, None)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; throw new ParseException(Option(sqlText), &quot;Unsupported SQL statement&quot;, position, position)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;先用PredictionMode.SLL进行解析，&lt;/div&gt;&lt;div&gt;失败后再用PredictionMode.LL，&lt;/div&gt;&lt;div&gt;若仍然失败则抛出异常&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
@@ -109,17 +109,53 @@
             <mxPoint x="180" y="1240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xvGSpYOVI_oOir4ocMuj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xvGSpYOVI_oOir4ocMuj-1" target="THCTk6hH6egYFEfsFXks-9">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-2" value="执行具体的Action" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Hme6o7wAtb_QXtmtZKTd-1">
+          <mxGeometry x="-0.5588" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xvGSpYOVI_oOir4ocMuj-1" target="THCTk6hH6egYFEfsFXks-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="xvGSpYOVI_oOir4ocMuj-1" value="val lexer = new SqlBaseLexer(new UpperCaseCharStream(CharStreams.fromString(command)))&lt;br&gt;val tokenStream = new CommonTokenStream(lexer)&lt;br&gt;new SqlBaseParser(tokenStream)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-1" value="val lexer = new SqlBaseLexer(new UpperCaseCharStream(CharStreams.fromString(command)))&lt;br&gt;val tokenStream = new CommonTokenStream(lexer)&lt;br&gt;new SqlBaseParser(tokenStream)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="170" y="335" width="620" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="xvGSpYOVI_oOir4ocMuj-6" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="xvGSpYOVI_oOir4ocMuj-5" target="THCTk6hH6egYFEfsFXks-29">
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-6" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="xvGSpYOVI_oOir4ocMuj-5" target="THCTk6hH6egYFEfsFXks-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="xvGSpYOVI_oOir4ocMuj-5" value="使用事先定义好的 Rule 以及 Catalog 等信息对 Unresolved LogicalPlan 进行 transform。&lt;br&gt;Catalog 主要用于各种函数资源信息和元数据信息（数据库、数据表、数据视图、数据分区与函数等）的统一管理。&lt;br&gt;&lt;div&gt;多个性质类似的 Rule 组成一个 Batch，比如上面名为 Hints 的 Batch就是由很多个 Hints Rule 组成；而多个 Batch 构成一个 batches。这些 batches 会由 RuleExecutor 执行，先按一个一个 Batch 顺序执行，然后对 Batch 里面的每个 Rule 顺序执行。每个 Batch 会执行一次（Once）或多次（FixedPoint，由&lt;/div&gt;&lt;div&gt;spark.sql.optimizer.maxIterations 参数决定）&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="xvGSpYOVI_oOir4ocMuj-5" value="使用事先定义好的 Rule 以及 Catalog 等信息对 Unresolved LogicalPlan 进行 transform。&lt;br&gt;Catalog 主要用于各种函数资源信息和元数据信息（数据库、数据表、数据视图、数据分区与函数等）的统一管理。&lt;br&gt;&lt;div&gt;多个性质类似的 Rule 组成一个 Batch，比如上面名为 Hints 的 Batch就是由很多个 Hints Rule 组成；而多个 Batch 构成一个 batches。这些 batches 会由 RuleExecutor 执行，先按一个一个 Batch 顺序执行，然后对 Batch 里面的每个 Rule 顺序执行。每个 Batch 会执行一次（Once）或多次（FixedPoint，由&lt;/div&gt;&lt;div&gt;spark.sql.optimizer.maxIterations 参数决定）&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="330" y="790" width="560" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-1" target="dJa-XMbD3ppQLrqUtmth-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-1" value="QueryExecution#executedPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="1330" width="205" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-3" target="dJa-XMbD3ppQLrqUtmth-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-9" value="SparkPlan" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-8">
+          <mxGeometry x="0.0215" y="15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-3" value="&lt;div&gt;lazy val sparkPlan: SparkPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; SparkSession.setActiveSession(sparkSession)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // TODO: We use next(), i.e. take the first plan returned by the planner, here for now,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;but we will implement to choose the best plan.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; planner.plan(ReturnAnswer(optimizedPlan)).next()&lt;/div&gt;&lt;div&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1310" width="375" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-5" value="QueryExecution#&lt;br&gt;prepareForExecution(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="47.5" y="1440" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-11" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.997;entryY=0.571;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-10" target="dJa-XMbD3ppQLrqUtmth-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-12" value="Optimizer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-11">
+          <mxGeometry x="0.4033" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-10" value="lazy val optimizedPlan: LogicalPlan = sparkSession.sessionState.optimizer.execute(withCachedData)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="827" y="1320" width="400" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
