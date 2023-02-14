@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T07:16:19.123Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="QHF5HdL2K-9k0wQzlT74" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T07:25:15.650Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="hZAJo4Qq-enVpYJIf0dx" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -219,11 +219,16 @@
         <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="45" y="1960" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-1" value="WholeStageCodegenExec#&lt;br&gt;doExecute" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="45" y="2130" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-2" target="OyspbbeXxSc23yl87xw1-4">
+        <mxCell id="OyspbbeXxSc23yl87xw1-23" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-1" target="OyspbbeXxSc23yl87xw1-2">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-1" value="WholeStageCodegenExec#&lt;br&gt;doExecute" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="2119" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-2" target="OyspbbeXxSc23yl87xw1-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="2338" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-6" value="返回结果为元组&lt;br&gt;(CodegenContext, WholeStageCodegenExec&lt;br&gt;)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OyspbbeXxSc23yl87xw1-5">
           <mxGeometry x="-0.2667" y="1" relative="1" as="geometry">
@@ -234,42 +239,50 @@
           <mxGeometry x="45" y="2200" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-3" value="" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="2060" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-4" target="OyspbbeXxSc23yl87xw1-7">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-4" value="WholeStageCodegenExec#&lt;br&gt;doExecute" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="45" y="2338" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-7" target="OyspbbeXxSc23yl87xw1-9">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry x="40" y="2040" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-7" value="CodeGenerator.compile(CodeAndComment&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="18.75" y="2430" width="292.5" height="40" as="geometry" />
+          <mxGeometry x="17.5" y="2338" width="292.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-9" target="OyspbbeXxSc23yl87xw1-13">
+        <mxCell id="OyspbbeXxSc23yl87xw1-20" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="440" y="2160" width="982.5" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-19" value="" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="OyspbbeXxSc23yl87xw1-20">
+          <mxGeometry width="982.5" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-9" value="CodeGenerator#cache.get(CodeAndComment)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="OyspbbeXxSc23yl87xw1-20">
+          <mxGeometry x="27.75" y="190" width="292.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="OyspbbeXxSc23yl87xw1-20" source="OyspbbeXxSc23yl87xw1-11" target="OyspbbeXxSc23yl87xw1-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-9" value="CodeGenerator#cache.get(CodeAndComment)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="18.75" y="2590" width="292.5" height="40" as="geometry" />
+        <mxCell id="OyspbbeXxSc23yl87xw1-11" value="&lt;div&gt;private val cache = CacheBuilder.newBuilder()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .maximumSize(SQLConf.get.codegenCacheMaxEntries)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .build(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; new CacheLoader[CodeAndComment, (GeneratedClass, Int)]() {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; override def load(code: CodeAndComment): (GeneratedClass, Int) = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val startTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val result = doCompile(code)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val endTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; def timeMs: Double = (endTime - startTime).toDouble / 1000000&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_SOURCE_CODE_SIZE.update(code.body.length)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_COMPILATION_TIME.update(timeMs.toLong)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; logInfo(s&quot;Code generated in $timeMs ms&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; result&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; })&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="OyspbbeXxSc23yl87xw1-20">
+          <mxGeometry x="362.5" y="10" width="602" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-11" target="OyspbbeXxSc23yl87xw1-9">
+        <mxCell id="OyspbbeXxSc23yl87xw1-13" value="CodeGenerator#doCompile" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="OyspbbeXxSc23yl87xw1-20">
+          <mxGeometry x="73.38" y="390" width="201.25" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="OyspbbeXxSc23yl87xw1-20" source="OyspbbeXxSc23yl87xw1-9" target="OyspbbeXxSc23yl87xw1-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-11" value="&lt;div&gt;private val cache = CacheBuilder.newBuilder()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .maximumSize(SQLConf.get.codegenCacheMaxEntries)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .build(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; new CacheLoader[CodeAndComment, (GeneratedClass, Int)]() {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; override def load(code: CodeAndComment): (GeneratedClass, Int) = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val startTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val result = doCompile(code)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val endTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; def timeMs: Double = (endTime - startTime).toDouble / 1000000&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_SOURCE_CODE_SIZE.update(code.body.length)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_COMPILATION_TIME.update(timeMs.toLong)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; logInfo(s&quot;Code generated in $timeMs ms&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; result&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; })&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="370" y="2338" width="602" height="270" as="geometry" />
+        <mxCell id="OyspbbeXxSc23yl87xw1-17" value="ClassBodyEvaluator&lt;br&gt;Janino是一种运行时的嵌入式Java编译器，将Java源文件编译为字节码文件，并把编译后的字节码直接加载到同一个 JVM 中运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="OyspbbeXxSc23yl87xw1-20">
+          <mxGeometry x="393.5" y="310" width="280" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-13" value="CodeGenerator#doCompile" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="64.38" y="2750" width="201.25" height="42" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-17" value="ClassBodyEvaluator&lt;br&gt;Janino是一种运行时的嵌入式Java编译器，将Java源文件编译为字节码文件，并把编译后的字节码直接加载到同一个 JVM 中运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="380" y="2680" width="280" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-17" target="OyspbbeXxSc23yl87xw1-13">
+        <mxCell id="OyspbbeXxSc23yl87xw1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="OyspbbeXxSc23yl87xw1-20" source="OyspbbeXxSc23yl87xw1-17" target="OyspbbeXxSc23yl87xw1-13">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="340" y="2660" as="sourcePoint" />
-            <mxPoint x="208" y="2777" as="targetPoint" />
+            <mxPoint x="-7.5" y="500" as="sourcePoint" />
+            <mxPoint x="-139.5" y="617" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-19" target="OyspbbeXxSc23yl87xw1-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="426" y="2385" as="sourcePoint" />
+            <mxPoint x="310" y="2430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-22" value="编译成字节码" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OyspbbeXxSc23yl87xw1-21">
+          <mxGeometry x="0.1099" y="-6" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
