@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T03:26:27.478Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Vil1TcNFEe-oN4ctHbIJ" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T03:34:29.116Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="H_lY3W_4K1TZ3zjhUXSz" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -188,7 +188,7 @@
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-31" value="全代码生成" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-30">
           <mxGeometry x="0.2381" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="2" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-23" value="preparations.foldLeft(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
@@ -205,8 +205,19 @@
         <mxCell id="dJa-XMbD3ppQLrqUtmth-25" value="&lt;div&gt;Seq(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; PlanSubqueries(sparkSession),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; EnsureRequirements(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; CollapseCodegenStages(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseExchange(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseSubquery(sparkSession.sessionState.conf))&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="221.74" y="1580" width="383" height="120" as="geometry" />
         </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-28" target="dJa-XMbD3ppQLrqUtmth-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-35" value="如果支持代码生成则将PhysicalPlan&lt;br&gt;转变为WholeStageCodegenExec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-33">
+          <mxGeometry x="-0.28" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-28" value="CollapseCodegenStages" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="47.5" y="1880" width="240" height="40" as="geometry" />
+          <mxGeometry x="47.5" y="1840" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="1960" width="240" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
