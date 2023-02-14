@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T07:49:12.958Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="BIAHbVM5uBtQB_FXLJa3" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T07:54:17.897Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="hKdWDgHmLzCvboPwNytf" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1058" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="818" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -215,20 +215,28 @@
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-35" value="调用其apply方法&lt;br&gt;如果支持代码生成则将PhysicalPlan&lt;br&gt;转变为WholeStageCodegenExec" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-33" vertex="1" connectable="0">
           <mxGeometry x="-0.28" y="2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint y="4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-28" value="CollapseCodegenStages" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1840" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="47.5" y="1990" width="240" height="40" as="geometry" />
+        <mxCell id="OyspbbeXxSc23yl87xw1-33" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;dashed=1;dashPattern=1 2;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-32" target="OyspbbeXxSc23yl87xw1-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-34" value="执行编译" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OyspbbeXxSc23yl87xw1-33">
+          <mxGeometry x="0.2761" y="2" relative="1" as="geometry">
+            <mxPoint x="2" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-32" value="WholeStageCodegenExec&lt;br&gt;也是一种SparkPlan&lt;br&gt;其在driver端生成，但此时并未执行编译过程，后面会在executor端执行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="47.5" y="1960" width="242.5" height="80" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-23" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-1" target="OyspbbeXxSc23yl87xw1-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-1" value="WholeStageCodegenExec#&lt;br&gt;doExecute" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="45" y="2119" width="240" height="40" as="geometry" />
+          <mxGeometry x="43.75" y="2110" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="OyspbbeXxSc23yl87xw1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OyspbbeXxSc23yl87xw1-2" target="OyspbbeXxSc23yl87xw1-7">
           <mxGeometry relative="1" as="geometry">
