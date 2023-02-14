@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T02:20:28.419Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="sDa8mNg12Cl2EkdxC0Kn" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T02:25:27.637Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="GYY1uZ6Ss81Mw_Ui9VXd" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -167,6 +167,18 @@
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-13" value="SparkPlanner" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="334.5" y="1510" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-17" target="dJa-XMbD3ppQLrqUtmth-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-17" value="SparkStrategies" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="334.5" y="1570" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-22" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-18" target="dJa-XMbD3ppQLrqUtmth-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-18" value="QueryPlanner&lt;br&gt;把一个LogicalPlan经过处理后转换为一系列PhysicalPlan" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="286.75" y="1630" width="205.5" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
