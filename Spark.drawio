@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T02:47:04.914Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="ho0GTODYFYfOlKOQ0V7h" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T02:58:39.925Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="lEDSopG3NfPDguDCFCgd" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -143,6 +143,9 @@
         <mxCell id="dJa-XMbD3ppQLrqUtmth-3" value="&lt;div&gt;lazy val sparkPlan: SparkPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; SparkSession.setActiveSession(sparkSession)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // TODO: We use next(), i.e. take the first plan returned by the planner, here for now,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;but we will implement to choose the best plan.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; planner.plan(ReturnAnswer(optimizedPlan)).next()&lt;/div&gt;&lt;div&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="330" y="1310" width="375" height="140" as="geometry" />
         </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-24" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-5" target="dJa-XMbD3ppQLrqUtmth-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-5" value="QueryExecution#&lt;br&gt;prepareForExecution(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="47.5" y="1440" width="240" height="40" as="geometry" />
         </mxCell>
@@ -166,19 +169,33 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-13" value="SparkPlanner" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="334.5" y="1510" width="110" height="30" as="geometry" />
+          <mxGeometry x="667.75" y="1501.69" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-21" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-17" target="dJa-XMbD3ppQLrqUtmth-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-17" value="SparkStrategies" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="334.5" y="1570" width="110" height="30" as="geometry" />
+          <mxGeometry x="667.75" y="1561.69" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-22" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-18" target="dJa-XMbD3ppQLrqUtmth-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-18" value="QueryPlanner&lt;br&gt;把一个LogicalPlan经过处理后转换为一系列PhysicalPlan&lt;br&gt;调用next()选择第一个PhysicalPlan返回，即认为第一个PhysicalPlan是最优的" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="286.75" y="1630" width="205.5" height="100" as="geometry" />
+          <mxGeometry x="620" y="1621.69" width="205.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-23" value="preparations.foldLeft(SparkPlan)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1750" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.708;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF0000;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-25" target="dJa-XMbD3ppQLrqUtmth-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-27" value="preparations" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dJa-XMbD3ppQLrqUtmth-26">
+          <mxGeometry x="-0.1244" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-25" value="&lt;div&gt;Seq(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; PlanSubqueries(sparkSession),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; EnsureRequirements(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; CollapseCodegenStages(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseExchange(sparkSession.sessionState.conf),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ReuseSubquery(sparkSession.sessionState.conf))&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="221.74" y="1580" width="383" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
