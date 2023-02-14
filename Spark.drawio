@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-14T07:30:10.995Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="AmdNY34S_ESz9K1GoRFp" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-14T07:36:14.670Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="A47fF2iH6S2qJ6TIgIpg" version="20.8.20" type="github">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -141,7 +141,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-3" value="&lt;div&gt;lazy val sparkPlan: SparkPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; SparkSession.setActiveSession(sparkSession)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // TODO: We use next(), i.e. take the first plan returned by the planner, here for now,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;but we will implement to choose the best plan.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; planner.plan(ReturnAnswer(optimizedPlan)).next()&lt;/div&gt;&lt;div&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="330" y="1310" width="375" height="140" as="geometry" />
+          <mxGeometry x="480" y="1300" width="375" height="140" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-5" target="dJa-XMbD3ppQLrqUtmth-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -158,9 +158,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-10" value="lazy val optimizedPlan: LogicalPlan = sparkSession.sessionState.optimizer.execute(withCachedData)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="827" y="1320" width="400" height="50" as="geometry" />
+          <mxGeometry x="980" y="1320" width="400" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="dJa-XMbD3ppQLrqUtmth-14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-13" target="dJa-XMbD3ppQLrqUtmth-3" edge="1">
+        <mxCell id="dJa-XMbD3ppQLrqUtmth-14" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-13" target="dJa-XMbD3ppQLrqUtmth-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-15" value="planner" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dJa-XMbD3ppQLrqUtmth-14" vertex="1" connectable="0">
