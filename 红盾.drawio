@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-17T01:18:20.599Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="ZwfsCHu9NBbvbbUQXUr6" version="20.8.20" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-02-17T06:53:39.709Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="svenpL-3CngGnQEmsyzV" version="20.8.20" type="github" pages="2">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -1150,14 +1150,6 @@
         <mxCell id="xEwf0O-MvUgcKREUFzJi-13" value="市场主体业务操作日志(新增、注销、变更、撤销等)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="2C3xvkMA8jlJhs2-aAn8-1" vertex="1">
           <mxGeometry x="10" width="150" height="30" as="geometry" />
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="wD5swaRd90kagXa59r-Y" name="运营分析系统数据结构">
-    <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
