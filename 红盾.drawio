@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-17T06:53:39.709Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="svenpL-3CngGnQEmsyzV" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-17T07:01:54.630Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="3nFqFjtTBUmcltDOWW0X" version="20.8.20" type="github" pages="2">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -317,7 +317,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
-    <mxGraphModel dx="1885" dy="1661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1645" dy="1661" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1149,6 +1149,15 @@
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-13" value="市场主体业务操作日志(新增、注销、变更、撤销等)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="2C3xvkMA8jlJhs2-aAn8-1" vertex="1">
           <mxGeometry x="10" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PYHKH1M4IgRy1iAN6jMI-1" value="市场主体信息：&lt;br&gt;&amp;lt;...&amp;gt; ZWDEEPIN &amp;lt;市场主体信息的json字符串&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-370" y="1197" width="300" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="PYHKH1M4IgRy1iAN6jMI-2" value="执照信息：&lt;br&gt;&amp;lt;...&amp;gt;localdomain &amp;lt;执照信息的json字符串&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-390" y="940" width="300" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="PYHKH1M4IgRy1iAN6jMI-3" value="执照使用信息：&lt;br&gt;&amp;lt;?&amp;gt;#&amp;lt;执照使用时间&amp;gt;#&amp;lt;公司名称&amp;gt;#&amp;lt;业务类型&amp;gt;#&amp;lt;角色&amp;gt;#&amp;lt;地区编码&amp;gt;#&amp;lt;执照SN&amp;gt;#&amp;lt;终端类型&amp;gt;#&amp;lt;?&amp;gt;...&amp;lt;?&amp;gt;#&quot;成功&quot;或&quot;失败&quot;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-395" y="760" width="310" height="71.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
