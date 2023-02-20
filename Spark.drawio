@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-20T01:35:19.915Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="eBHWpDtnhkON7ZJqIU2P" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-20T03:15:34.321Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="VFQHVIwqJKgwAXaVnZgQ" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -221,10 +221,10 @@
         <mxCell id="dJa-XMbD3ppQLrqUtmth-28" value="CollapseCodegenStages" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="47.5" y="1840" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ulmAUWNIJSCN8ucsj58H-5" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="dJa-XMbD3ppQLrqUtmth-32" target="OyspbbeXxSc23yl87xw1-1">
+        <mxCell id="ulmAUWNIJSCN8ucsj58H-5" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="dJa-XMbD3ppQLrqUtmth-32" target="OyspbbeXxSc23yl87xw1-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ulmAUWNIJSCN8ucsj58H-6" value="在触发action时调用其doExecute方法&lt;br&gt;执行代码的编译动作" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ulmAUWNIJSCN8ucsj58H-5">
+        <mxCell id="ulmAUWNIJSCN8ucsj58H-6" value="在触发action时调用其doExecute方法&lt;br&gt;执行代码的编译动作" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="ulmAUWNIJSCN8ucsj58H-5" vertex="1" connectable="0">
           <mxGeometry x="-0.6654" relative="1" as="geometry">
             <mxPoint x="95" y="10" as="offset" />
           </mxGeometry>
@@ -391,11 +391,51 @@
         <mxCell id="IJuBd549jqMZ3XzgCkh1-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="IJuBd549jqMZ3XzgCkh1-8" target="aiSqFYhptoILfyd779yY-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ulmAUWNIJSCN8ucsj58H-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;curved=1;" edge="1" parent="1" source="IJuBd549jqMZ3XzgCkh1-8" target="OyspbbeXxSc23yl87xw1-1">
+        <mxCell id="ulmAUWNIJSCN8ucsj58H-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;curved=1;" parent="1" source="IJuBd549jqMZ3XzgCkh1-8" target="OyspbbeXxSc23yl87xw1-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="IJuBd549jqMZ3XzgCkh1-8" value="SparkPlan#doExecute()" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="90.97" y="2930" width="199.69" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="paH7I8qUg0bJJ3d27nVu" name="SparkSession启动">
+    <mxGraphModel dx="1058" dy="-677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-etMcBYjCISu4KRJcOCu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-1" target="-etMcBYjCISu4KRJcOCu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-1" value="SparkSession.Builder#getOrCreate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1220" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-3" target="-etMcBYjCISu4KRJcOCu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-3" value="SparkContext$#getOrCreate(SparkConf)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1310" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-5" target="-etMcBYjCISu4KRJcOCu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-9" value="SparkUI生效时&lt;br&gt;创建Web UI并绑定" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-etMcBYjCISu4KRJcOCu-8">
+          <mxGeometry x="-0.2429" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-5" value="new SparkContext(SparkConf, Boolean)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1400" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-7" target="-etMcBYjCISu4KRJcOCu-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-7" value="SparkUI$#create" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1500" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-10" value="加载Hadoop的配置" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1590" width="260" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
