@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-20T06:38:11.364Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="oEWcJ2s3CrL8Ho4UoQd_" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-20T06:39:33.936Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="i4MGtkTdg3Ow8_bYdCSy" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -465,9 +465,9 @@
         <mxCell id="-etMcBYjCISu4KRJcOCu-24" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="-etMcBYjCISu4KRJcOCu-15" target="-etMcBYjCISu4KRJcOCu-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-etMcBYjCISu4KRJcOCu-25" value="spark" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="-etMcBYjCISu4KRJcOCu-24" vertex="1" connectable="0">
+        <mxCell id="-etMcBYjCISu4KRJcOCu-25" value="spark://..." style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="-etMcBYjCISu4KRJcOCu-24" vertex="1" connectable="0">
           <mxGeometry x="0.1038" y="8" relative="1" as="geometry">
-            <mxPoint x="36" y="-11" as="offset" />
+            <mxPoint x="106" y="-17" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NuTxnQi3ZLx0hPxZxHnt-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-15" target="NuTxnQi3ZLx0hPxZxHnt-1">
@@ -479,11 +479,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="NuTxnQi3ZLx0hPxZxHnt-5" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-15" target="NuTxnQi3ZLx0hPxZxHnt-4">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="1815" />
+              <mxPoint x="420" y="1970" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="NuTxnQi3ZLx0hPxZxHnt-6" value="其他情况" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NuTxnQi3ZLx0hPxZxHnt-5">
           <mxGeometry x="0.1477" y="5" relative="1" as="geometry">
-            <mxPoint y="1" as="offset" />
+            <mxPoint x="25" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-etMcBYjCISu4KRJcOCu-15" value="SparkContext$#createTaskScheduler&lt;br&gt;返回一个带有两个元素的元组&lt;br&gt;(scheduler backend, the task scheduler)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
@@ -493,13 +498,13 @@
           <mxGeometry x="25" y="1890" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-etMcBYjCISu4KRJcOCu-20" value="(LocalSchedulerBackend, TaskSchedulerImpl)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="480" y="1650" width="300" height="40" as="geometry" />
+          <mxGeometry x="600" y="1630" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-etMcBYjCISu4KRJcOCu-23" value="(StandaloneSchedulerBackend, TaskSchedulerImpl)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="520" y="1720" width="300" height="40" as="geometry" />
+          <mxGeometry x="600" y="1720" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NuTxnQi3ZLx0hPxZxHnt-1" value="(StandaloneSchedulerBackend, TaskSchedulerImpl)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="610" y="1830" width="300" height="40" as="geometry" />
+          <mxGeometry x="600" y="1828" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NuTxnQi3ZLx0hPxZxHnt-4" value="根据masterUrl利用SPI加载对应的ExternalClusterManager，并得到相应的调度器后端和任务调度器" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="600" y="1940" width="390" height="60" as="geometry" />
