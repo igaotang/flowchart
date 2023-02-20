@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-20T03:23:14.656Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="ubfBfsZWO8WRjM-q5Snp" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-20T03:34:52.146Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="qoRSmika-7QWp_XrT4Oh" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1058" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -401,7 +401,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="paH7I8qUg0bJJ3d27nVu" name="SparkSession启动">
-    <mxGraphModel dx="1058" dy="-677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="818" dy="-677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -451,8 +451,36 @@
         <mxCell id="-etMcBYjCISu4KRJcOCu-13" value="创建HeartbeatReceiver&lt;br&gt;用于后续TaskScheduler的创建" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="25" y="1680" width="260" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-15" target="-etMcBYjCISu4KRJcOCu-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-15" target="-etMcBYjCISu4KRJcOCu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-22" value="local或者&lt;br&gt;local[N/*]或者&lt;br&gt;local[N/*, N]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-etMcBYjCISu4KRJcOCu-21">
+          <mxGeometry x="0.4308" y="-10" relative="1" as="geometry">
+            <mxPoint x="-16" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-24" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="-etMcBYjCISu4KRJcOCu-15" target="-etMcBYjCISu4KRJcOCu-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-25" value="spark" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="-etMcBYjCISu4KRJcOCu-24">
+          <mxGeometry x="0.1038" y="8" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="-etMcBYjCISu4KRJcOCu-15" value="SparkContext$#createTaskScheduler&lt;br&gt;返回一个带有两个元素的元组&lt;br&gt;(scheduler backend, the task scheduler)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="25" y="1790" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-18" value="创建HeartbeatReceiver&lt;br&gt;用于后续TaskScheduler的创建" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1890" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-20" value="(LocalSchedulerBackend, TaskSchedulerImpl)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1720" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-etMcBYjCISu4KRJcOCu-23" value="(StandaloneSchedulerBackend, TaskSchedulerImpl)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1860" width="300" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
