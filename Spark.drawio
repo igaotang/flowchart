@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-22T08:17:12.641Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="EM-NuDVnUUREgQUcRtJ0" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-22T08:28:18.390Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="LWyADGrAVjHF3MCV7pNz" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -401,7 +401,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="paH7I8qUg0bJJ3d27nVu" name="SparkSession启动">
-    <mxGraphModel dx="972" dy="-840" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="-300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -536,11 +536,23 @@
         <mxCell id="Hqz8F7PNRxAuPTztgPLw-4" value="CoarseGrainedExecutorBackend" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="670" y="1560" width="220" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="Xb8tw--Ex9bPkzGmWfd--5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Xb8tw--Ex9bPkzGmWfd--1" target="Xb8tw--Ex9bPkzGmWfd--4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Xb8tw--Ex9bPkzGmWfd--1" value="创建DAGScheduler&lt;br&gt;一个高级调度层，实现了面向stage的调度。对于每个job，DAGScheduler会计算它的stage的DAG，保持跟踪RDD和stage输出被物化，并找到一个最小的调度方案将其提交给TaskScheduler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="22.5" y="1980" width="265" height="110" as="geometry" />
         </mxCell>
         <mxCell id="Xb8tw--Ex9bPkzGmWfd--3" value="参考：&lt;a href=&quot;https://blog.csdn.net/pre_tender/article/details/98342730&quot;&gt;https://blog.csdn.net/pre_tender/article/details/98342730&lt;/a&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="1180" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb8tw--Ex9bPkzGmWfd--7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="Xb8tw--Ex9bPkzGmWfd--4" target="Xb8tw--Ex9bPkzGmWfd--6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb8tw--Ex9bPkzGmWfd--4" value="启动MetricsSystem" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="22.5" y="2130" width="265" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Xb8tw--Ex9bPkzGmWfd--6" value="&lt;div&gt;1 注册Sources&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;指定了从哪里收集测量数据；&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Source有两种来源：&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;- Spark internal source: MasterSource/WorkerSource等；&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;- Common source： JvmSource&lt;/div&gt;&lt;div&gt;2 注册Sinks&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;指定了往哪里输出测量数据；&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Spark目前提供的Sink有ConsoleSink、CsvSink、JmxSink、MetricsServlet、GraphiteSink等；Spark使用MetricsServlet作为默认的Sink。&lt;/div&gt;&lt;div&gt;3 将Sinks增加Jetty的ServletContextHandler；&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="400" y="2040" width="880" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
