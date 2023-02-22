@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-22T07:29:01.279Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="5fjDF7vToMnpTURU7WMo" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-22T07:34:13.222Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="pMIRC1W0dekIgd_iGaZS" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -401,7 +401,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="paH7I8qUg0bJJ3d27nVu" name="SparkSession启动">
-    <mxGraphModel dx="1058" dy="-677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="-300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -486,7 +486,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="NuTxnQi3ZLx0hPxZxHnt-6" value="其他情况" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NuTxnQi3ZLx0hPxZxHnt-5" vertex="1" connectable="0">
+        <mxCell id="NuTxnQi3ZLx0hPxZxHnt-6" value="其他情况，如：&lt;br&gt;mesos://host:port&lt;br&gt;k8s://https://host:port" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NuTxnQi3ZLx0hPxZxHnt-5" vertex="1" connectable="0">
           <mxGeometry x="0.1477" y="5" relative="1" as="geometry">
             <mxPoint x="25" y="1" as="offset" />
           </mxGeometry>
@@ -509,7 +509,7 @@
         <mxCell id="NuTxnQi3ZLx0hPxZxHnt-4" value="根据masterUrl利用SPI加载对应的ExternalClusterManager，并得到相应的调度器后端和任务调度器" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="600" y="1940" width="390" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Hqz8F7PNRxAuPTztgPLw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="Hqz8F7PNRxAuPTztgPLw-1" target="-etMcBYjCISu4KRJcOCu-15">
+        <mxCell id="Hqz8F7PNRxAuPTztgPLw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" parent="1" source="Hqz8F7PNRxAuPTztgPLw-1" target="-etMcBYjCISu4KRJcOCu-15" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="340" y="1570" />
@@ -518,19 +518,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="Hqz8F7PNRxAuPTztgPLw-1" value="RpcEndpoint" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="Hqz8F7PNRxAuPTztgPLw-1" value="RpcEndpoint" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="470" y="1500" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Hqz8F7PNRxAuPTztgPLw-7" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="Hqz8F7PNRxAuPTztgPLw-3" target="Hqz8F7PNRxAuPTztgPLw-1">
+        <mxCell id="Hqz8F7PNRxAuPTztgPLw-7" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="Hqz8F7PNRxAuPTztgPLw-3" target="Hqz8F7PNRxAuPTztgPLw-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Hqz8F7PNRxAuPTztgPLw-3" value="LocalEndpoint" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="Hqz8F7PNRxAuPTztgPLw-3" value="LocalEndpoint" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="670" y="1460" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Hqz8F7PNRxAuPTztgPLw-9" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="Hqz8F7PNRxAuPTztgPLw-4" target="Hqz8F7PNRxAuPTztgPLw-1">
+        <mxCell id="Hqz8F7PNRxAuPTztgPLw-9" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="Hqz8F7PNRxAuPTztgPLw-4" target="Hqz8F7PNRxAuPTztgPLw-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Hqz8F7PNRxAuPTztgPLw-4" value="CoarseGrainedExecutorBackend" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="Hqz8F7PNRxAuPTztgPLw-4" value="CoarseGrainedExecutorBackend" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="670" y="1560" width="220" height="40" as="geometry" />
         </mxCell>
       </root>
