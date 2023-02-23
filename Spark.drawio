@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-02-23T08:14:42.439Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="UtSeE9wFAe1bkCPyZjfX" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-23T08:19:26.839Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="LC5JDyVK6wkOAdBmd9SD" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1802" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-13" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="2170" width="980" height="460" as="geometry" />
+        </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-12" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="711.25" y="3075" width="233.5" height="295" as="geometry" />
         </mxCell>
@@ -268,39 +271,9 @@
         <mxCell id="OyspbbeXxSc23yl87xw1-7" value="CodeGenerator.compile(CodeAndComment&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="577.5" y="2338" width="292.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-20" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1000" y="2160" width="982.5" height="440" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-19" value="" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="OyspbbeXxSc23yl87xw1-20" vertex="1">
-          <mxGeometry width="982.5" height="440" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-9" value="CodeGenerator#cache.get(CodeAndComment)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="OyspbbeXxSc23yl87xw1-20" vertex="1">
-          <mxGeometry x="27.75" y="190" width="292.5" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="OyspbbeXxSc23yl87xw1-20" source="OyspbbeXxSc23yl87xw1-11" target="OyspbbeXxSc23yl87xw1-9" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-11" value="&lt;div&gt;private val cache = CacheBuilder.newBuilder()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .maximumSize(SQLConf.get.codegenCacheMaxEntries)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .build(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; new CacheLoader[CodeAndComment, (GeneratedClass, Int)]() {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; override def load(code: CodeAndComment): (GeneratedClass, Int) = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val startTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val result = doCompile(code)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val endTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; def timeMs: Double = (endTime - startTime).toDouble / 1000000&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_SOURCE_CODE_SIZE.update(code.body.length)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_COMPILATION_TIME.update(timeMs.toLong)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; logInfo(s&quot;Code generated in $timeMs ms&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; result&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; })&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="OyspbbeXxSc23yl87xw1-20" vertex="1">
-          <mxGeometry x="362.5" y="10" width="602" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-13" value="CodeGenerator#doCompile" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="OyspbbeXxSc23yl87xw1-20" vertex="1">
-          <mxGeometry x="73.38" y="390" width="201.25" height="42" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="OyspbbeXxSc23yl87xw1-20" source="OyspbbeXxSc23yl87xw1-9" target="OyspbbeXxSc23yl87xw1-13" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-17" value="ClassBodyEvaluator&lt;br&gt;Janino是一种运行时的嵌入式Java编译器，将Java源文件编译为字节码文件，并把编译后的字节码直接加载到同一个 JVM 中运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="OyspbbeXxSc23yl87xw1-20" vertex="1">
-          <mxGeometry x="393.5" y="310" width="280" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="OyspbbeXxSc23yl87xw1-20" source="OyspbbeXxSc23yl87xw1-17" target="OyspbbeXxSc23yl87xw1-13" edge="1">
+        <mxCell id="OyspbbeXxSc23yl87xw1-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="fpK7iS9B7lr3rAS34iEF-13" target="OyspbbeXxSc23yl87xw1-7" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-7.5" y="500" as="sourcePoint" />
-            <mxPoint x="-139.5" y="617" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="OyspbbeXxSc23yl87xw1-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="OyspbbeXxSc23yl87xw1-19" target="OyspbbeXxSc23yl87xw1-7" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="986" y="2385" as="sourcePoint" />
+            <mxPoint x="1020" y="2400" as="sourcePoint" />
             <mxPoint x="870" y="2430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -492,6 +465,30 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="285" y="3000" as="sourcePoint" />
             <mxPoint x="533" y="2900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-9" value="CodeGenerator#cache.get(CodeAndComment)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1047.75" y="2370" width="292.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="OyspbbeXxSc23yl87xw1-11" target="OyspbbeXxSc23yl87xw1-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-11" value="&lt;div&gt;private val cache = CacheBuilder.newBuilder()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .maximumSize(SQLConf.get.codegenCacheMaxEntries)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; .build(&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; new CacheLoader[CodeAndComment, (GeneratedClass, Int)]() {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; override def load(code: CodeAndComment): (GeneratedClass, Int) = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val startTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val result = doCompile(code)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val endTime = System.nanoTime()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; def timeMs: Double = (endTime - startTime).toDouble / 1000000&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_SOURCE_CODE_SIZE.update(code.body.length)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CodegenMetrics.METRIC_COMPILATION_TIME.update(timeMs.toLong)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; logInfo(s&quot;Code generated in $timeMs ms&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; result&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; })&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1382.5" y="2190" width="602" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-13" value="CodeGenerator#doCompile" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1093.38" y="2570" width="201.25" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="OyspbbeXxSc23yl87xw1-9" target="OyspbbeXxSc23yl87xw1-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-17" value="ClassBodyEvaluator&lt;br&gt;Janino是一种运行时的嵌入式Java编译器，将Java源文件编译为字节码文件，并把编译后的字节码直接加载到同一个 JVM 中运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1413.5" y="2490" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="OyspbbeXxSc23yl87xw1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="OyspbbeXxSc23yl87xw1-17" target="OyspbbeXxSc23yl87xw1-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1012.5" y="2680" as="sourcePoint" />
+            <mxPoint x="880.5" y="2797" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
