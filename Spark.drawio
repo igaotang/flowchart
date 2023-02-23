@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-23T08:01:59.426Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="gyuXTKe47Y8BwP2KPDFl" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-23T08:07:11.359Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="gc7z6WrG0reDRdIoChYh" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -456,6 +456,33 @@
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-17" value="RDD#doCheckpoint" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="394" y="3390" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-1" target="fpK7iS9B7lr3rAS34iEF-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-1" value="DAGScheduler#submitJob" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="3090" width="176" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-2" target="fpK7iS9B7lr3rAS34iEF-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-2" value="创建JobWaiter" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="3170" width="176" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-4" target="fpK7iS9B7lr3rAS34iEF-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-4" value="EventLoop#post&lt;br&gt;创建一个JobSubmitted并将其提交到EventLoop中的阻塞队列中" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="3246" width="176" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-5" value="返回上面创建的JobWaiter" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="3370" width="176" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-15" target="fpK7iS9B7lr3rAS34iEF-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="671" y="3060" as="sourcePoint" />
+            <mxPoint x="890" y="3020" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
