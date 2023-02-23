@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-23T08:20:20.577Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="HHST-7_h0POnjiS4IvHh" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-23T08:51:39.872Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="jBNtmHsf0zr0rm-OZOvx" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -490,6 +490,27 @@
             <mxPoint x="1012.5" y="2680" as="sourcePoint" />
             <mxPoint x="880.5" y="2797" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-14" target="fpK7iS9B7lr3rAS34iEF-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-14" value="由事件循环的doOnReceive方法处理&lt;br&gt;DAGSchedulerEventProcessLoop#doOnReceive" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1034.01" y="3130" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-16" target="fpK7iS9B7lr3rAS34iEF-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-16" value="DAGScheduler#handleJobSubmitted" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1071" y="3210" width="246" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-17" target="fpK7iS9B7lr3rAS34iEF-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-17" value="创建ResultStage和ActiveJob，并将两者进行关联" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1093.38" y="3290" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-20" value="DAGScheduler#submitStage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1093.38" y="3380" width="200" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
