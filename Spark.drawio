@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2023-02-23T08:07:11.359Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="gc7z6WrG0reDRdIoChYh" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-23T08:14:42.439Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="UtSeE9wFAe1bkCPyZjfX" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-12" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="711.25" y="3075" width="233.5" height="295" as="geometry" />
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-9" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="386.5" y="3000" width="233.5" height="370" as="geometry" />
+        </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=14;" parent="1" source="THCTk6hH6egYFEfsFXks-1" target="THCTk6hH6egYFEfsFXks-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -430,32 +436,26 @@
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-11" value="SparkContext#getCallSite&lt;br&gt;得到调用点" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="414" y="3010" width="166" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="8siI0z8Bu0LZt-7pcZ8k-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-6" target="8siI0z8Bu0LZt-7pcZ8k-11">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="310" y="3020" as="sourcePoint" />
-            <mxPoint x="426" y="2960" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-13" target="8siI0z8Bu0LZt-7pcZ8k-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-13" value="SparkContext#clean&lt;br&gt;清理闭包(closure)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="414" y="3105" width="166" height="50" as="geometry" />
+          <mxGeometry x="414" y="3085" width="166" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-15" target="8siI0z8Bu0LZt-7pcZ8k-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-15" value="DAGScheduler#runJob" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="413.56" y="3206" width="166" height="40" as="geometry" />
+          <mxGeometry x="414" y="3170" width="166" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-16" target="8siI0z8Bu0LZt-7pcZ8k-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-16" value="ConsoleProgressBar#finishAll" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="393.74" y="3300" width="206" height="40" as="geometry" />
+          <mxGeometry x="399" y="3240" width="206" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-17" value="RDD#doCheckpoint" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="394" y="3390" width="206" height="40" as="geometry" />
+          <mxGeometry x="400.25" y="3316" width="206" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-1" target="fpK7iS9B7lr3rAS34iEF-2">
           <mxGeometry relative="1" as="geometry" />
@@ -467,21 +467,31 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-2" value="创建JobWaiter" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="3170" width="176" height="40" as="geometry" />
+          <mxGeometry x="741" y="3150" width="176" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-4" target="fpK7iS9B7lr3rAS34iEF-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-4" value="EventLoop#post&lt;br&gt;创建一个JobSubmitted并将其提交到EventLoop中的阻塞队列中" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="3246" width="176" height="70" as="geometry" />
+          <mxGeometry x="741" y="3220" width="176" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-5" value="返回上面创建的JobWaiter" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="740" y="3370" width="176" height="40" as="geometry" />
+          <mxGeometry x="741" y="3316" width="176" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="fpK7iS9B7lr3rAS34iEF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-15" target="fpK7iS9B7lr3rAS34iEF-1">
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-15">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="671" y="3060" as="sourcePoint" />
-            <mxPoint x="890" y="3020" as="targetPoint" />
+            <mxPoint x="820" y="3080" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="580" y="3050" />
+              <mxPoint x="820" y="3050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-6" target="fpK7iS9B7lr3rAS34iEF-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285" y="3000" as="sourcePoint" />
+            <mxPoint x="533" y="2900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
