@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-23T08:53:33.326Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="pT9SAoYxqn7VQeWG8ex-" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-27T00:56:20.067Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="ULitYgROMzAKnL_QEvKO" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1802" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -509,8 +509,8 @@
         <mxCell id="fpK7iS9B7lr3rAS34iEF-17" value="创建ResultStage和ActiveJob，并将两者进行关联" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1093.38" y="3290" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="fpK7iS9B7lr3rAS34iEF-20" value="DAGScheduler#submitStage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="1093.38" y="3380" width="200" height="40" as="geometry" />
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-20" value="DAGScheduler#submitStage(&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; rdd: RDD[T],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; func: (TaskContext, Iterator[T]) =&amp;gt; U,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; partitions: Seq[Int],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; callSite: CallSite,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; resultHandler: (Int, U) =&amp;gt; Unit,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; properties: Properties): JobWaiter[U]&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1050.7" y="3380" width="286.62" height="140" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-25" value="ActiveJob接收的stage有两种类型&lt;br&gt;- Resultstage&lt;br&gt;-&amp;nbsp;ShuffleMapStage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1410" y="3245" width="280" height="85" as="geometry" />
@@ -520,6 +520,9 @@
             <mxPoint x="1510.25" y="3250" as="sourcePoint" />
             <mxPoint x="1340.25" y="3285" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-27" value="func:&lt;br&gt;callSite: 调用点，触发spark action方法的用户代码的位置&lt;br&gt;resultHandler:&lt;br&gt;properties:" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="3380" width="280" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
