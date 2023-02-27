@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T08:36:43.324Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="_duWGWE-yFVg2NNlOnrB" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-27T08:41:10.663Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="BNXb7FrHGuixfVeFmy7n" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -512,6 +512,9 @@
         <mxCell id="fpK7iS9B7lr3rAS34iEF-17" value="创建ResultStage和ActiveJob，并将两者进行关联&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="1093.38" y="3290" width="200" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-20" target="dQKbh80O4o_hzA0gJbdG-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-20" value="DAGScheduler#submitStage(&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; rdd: RDD[T],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; func: (TaskContext, Iterator[T]) =&amp;gt; U,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; partitions: Seq[Int],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; callSite: CallSite,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; resultHandler: (Int, U) =&amp;gt; Unit,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; properties: Properties): JobWaiter[U]&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1050.7" y="3380" width="286.62" height="140" as="geometry" />
         </mxCell>
@@ -566,6 +569,15 @@
               <mxPoint x="1880" y="3180" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-10" target="dQKbh80O4o_hzA0gJbdG-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-10" value="DAGScheduler#submitMissingTasks" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1070.38" y="3580" width="246" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-12" value="taskIdToLocations: Map[Int, Seq[TaskLocation]]&lt;br&gt;得到每个任务的调度位置分布映射" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1070.38" y="3670" width="246" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
