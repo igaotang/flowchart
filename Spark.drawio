@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T08:41:10.663Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="BNXb7FrHGuixfVeFmy7n" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-27T08:47:45.819Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="Hb1K8CjoiRMn1Bq8fAcq" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -576,8 +576,26 @@
         <mxCell id="dQKbh80O4o_hzA0gJbdG-10" value="DAGScheduler#submitMissingTasks" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1070.38" y="3580" width="246" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-12" target="dQKbh80O4o_hzA0gJbdG-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dQKbh80O4o_hzA0gJbdG-12" value="taskIdToLocations: Map[Int, Seq[TaskLocation]]&lt;br&gt;得到每个任务的调度位置分布映射" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1070.38" y="3670" width="246" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-14" target="dQKbh80O4o_hzA0gJbdG-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-14" value="得到任务的字节数组并广播&lt;br&gt;SparkContext#broadcast" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1071" y="3770" width="246" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-16" target="dQKbh80O4o_hzA0gJbdG-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-16" value="根据stage得到Task" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1070.38" y="3880" width="246" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-17" value="提交Task&lt;br&gt;TaskScheduler#submitTasks" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1070.38" y="3990" width="246" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
