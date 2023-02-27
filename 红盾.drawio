@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T02:05:09.382Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="nv2cWKPst50jAP4b1EIx" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-27T02:05:57.721Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="5DeSpzcgfxECM3mSWDpb" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -853,6 +853,9 @@
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-5" value="日志信息：&lt;br&gt;&amp;lt;...&amp;gt; ZWDEEPIN &amp;lt;市场主体信息的json字符串&amp;gt;&lt;br&gt;{&quot;LICENSE_SN&quot;:&quot;46000020230223000958000028165661&quot;,&quot;UPDATED&quot;:1677082198563,&quot;ID_TYPE&quot;:&quot;0&quot;,&quot;AREA_CODE&quot;:&quot;460000&quot;,&lt;br&gt;&quot;DEL_REASON&quot;:&quot;&quot;,&quot;NAME&quot;:&quot;仲苏鹏&quot;,&quot;AUTH_ID&quot;:&quot;LA202302102159319360dEU5xPci&quot;,&quot;ROLE&quot;:&quot;1&quot;,&quot;ENT_NAME&quot;:&quot;儋州幕佳嘉选百货商行（个人独资）&quot;,&quot;CREATED&quot;:1677082198563,&quot;OPENID&quot;:&quot;oiEYl0fBmYkGqbqkwwwa7GCghOtg&quot;,&quot;DOWN_TYPE&quot;:&quot;00&quot;,&lt;br&gt;&quot;HASH_ID&quot;:&quot;uWIrrWz7G3kPC5zcuijX653c28mUC1LDhBqI/7MIWMI=&quot;,&quot;BUSS_TYPE&quot;:&quot;1&quot;,&quot;ORG_CODE&quot;:&quot;91460000MABLK6P783&quot;,&lt;br&gt;&quot;TERNIMAL_TYPE&quot;:&quot;105&quot;,&quot;TOKEN&quot;:&quot;WtACWTQUgIQoD-7FtUsIX7cdDwtNK6lWPdcpGxWihy4TSrwZk2Zru2W_ug8DjiMRcVl5iqYogA1kHAem766x-ya8QFry2G7bFyFKBooud74=&quot;}" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-560" y="1381" width="720" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-6" value="投资任职查询" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry y="2050" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
