@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T08:55:16.657Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="OpuR2JT3ZqnYiV7ITlpn" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-27T08:56:21.617Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="zvKrIR9PprYpk0bjuqny" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -600,10 +600,13 @@
         <mxCell id="dQKbh80O4o_hzA0gJbdG-17" value="创建TaskSet并提交&lt;br&gt;TaskSchedulerImpl#submitTasks" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1070.38" y="3990" width="246" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-21" target="dQKbh80O4o_hzA0gJbdG-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dQKbh80O4o_hzA0gJbdG-21" value="创建TaskSetManager&lt;br&gt;TaskSchedulerImpl#createTaskSetManager" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1053.3799999999999" y="4080" width="280" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="dQKbh80O4o_hzA0gJbdG-22" value="" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-22" value="提交&lt;br&gt;SchedulerBackend#reviveOffers" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1060" y="4180" width="246" height="50" as="geometry" />
         </mxCell>
         <mxCell id="dQKbh80O4o_hzA0gJbdG-25" value="TaskSetManager&lt;br&gt;用来调度单个TaskSet中的所有Task，并根据task的执行，在失败的时候进行重试；还会处理位置感知的调度" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
