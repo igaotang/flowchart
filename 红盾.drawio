@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T01:58:31.004Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="T7_aVf67p_cyMXX4QGyP" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-27T02:04:38.782Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="2SBe38WMg_DpzlUIjmiG" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -689,32 +689,32 @@
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-31" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;" parent="1" source="xEwf0O-MvUgcKREUFzJi-29" target="Agi0m2Bdz71Y0sU2h22X-14" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="900" y="1640" as="targetPoint" />
+            <mxPoint x="610" y="2030" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-33" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;" parent="1" source="xEwf0O-MvUgcKREUFzJi-29" target="Agi0m2Bdz71Y0sU2h22X-15" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="900" y="1730" as="targetPoint" />
+            <mxPoint x="610" y="2120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-29" value="达梦&lt;br&gt;manager.QUERY_LOG" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" parent="1" vertex="1">
-          <mxGeometry x="575" y="1650" width="170" height="60" as="geometry" />
+          <mxGeometry x="285" y="2040" width="170" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-35" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;" parent="1" source="Agi0m2Bdz71Y0sU2h22X-14" target="xEwf0O-MvUgcKREUFzJi-34" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1090" y="1640" as="sourcePoint" />
+            <mxPoint x="800" y="2030" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-37" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;" parent="1" source="Agi0m2Bdz71Y0sU2h22X-15" target="xEwf0O-MvUgcKREUFzJi-36" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1090" y="1730" as="sourcePoint" />
+            <mxPoint x="800" y="2120" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-34" value="&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;MySQL&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;interface_monitor.&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;query_log&lt;/span&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" parent="1" vertex="1">
-          <mxGeometry x="1193" y="1610" width="197" height="60" as="geometry" />
+          <mxGeometry x="903" y="2000" width="197" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-36" value="&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;MySQL&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;yyfx.&lt;span style=&quot;background-color: initial; font-size: 14px;&quot;&gt;query_log&lt;/span&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" parent="1" vertex="1">
-          <mxGeometry x="1193" y="1700" width="187" height="60" as="geometry" />
+          <mxGeometry x="903" y="2090" width="187" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xEwf0O-MvUgcKREUFzJi-38" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-10" y="1802" width="180" height="40" as="geometry" />
@@ -795,10 +795,10 @@
           <mxGeometry x="285" y="1795" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Agi0m2Bdz71Y0sU2h22X-14" value="query_log" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
-          <mxGeometry x="890" y="1615" width="200" height="50" as="geometry" />
+          <mxGeometry x="600" y="2005" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Agi0m2Bdz71Y0sU2h22X-15" value="query_log_now" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
-          <mxGeometry x="890" y="1705" width="200" height="50" as="geometry" />
+          <mxGeometry x="600" y="2095" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Agi0m2Bdz71Y0sU2h22X-16" value="market_players_hive" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="850" y="1202" width="200" height="50" as="geometry" />
@@ -849,7 +849,10 @@
           <mxGeometry x="320" y="620" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-4" value="日志信息：&lt;br&gt;&amp;lt;...&amp;gt; &amp;nbsp; realName - &amp;lt;json字符串&amp;gt;&lt;br&gt;2023-02-23T00:11:49.774Z localhost.localdomain 2023-02-23 08:11:49.362 [http-nio-8080-exec-434] INFO&amp;nbsp; realName - {&quot;HASH_ID&quot;:&quot;bNq/dELWX1BAiL9/rCoc4QcdqBt8vtJrX33JY4PInHc=&quot;,&quot;TERMINAL_TYPE&quot;:&quot;105&quot;,&quot;ACTIONED&quot;:1677111109362,&quot;TOKEN&quot;:&quot;WtACWTQUgIQoD-7FtUsIX25rZA0p2QYyH1Lt_fyyAiP-Dy6AFmrd-qu26nrd83_zsFrDt47Po9a5V7ALdcVe3XxX_tZWdPiP-Cu2a68d-3Q=&quot;,&quot;NAME&quot;:&quot;于亚杰&quot;}" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-320" y="1680" width="850" height="93" as="geometry" />
+          <mxGeometry x="-380" y="1683.5" width="850" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-5" value="日志信息：&lt;br&gt;&amp;lt;...&amp;gt; ZWDEEPIN &amp;lt;市场主体信息的json字符串&amp;gt;&lt;br&gt;{&quot;LICENSE_SN&quot;:&quot;46000020230223000958000028165661&quot;,&quot;UPDATED&quot;:1677082198563,&quot;ID_TYPE&quot;:&quot;0&quot;,&quot;AREA_CODE&quot;:&quot;460000&quot;,&lt;br&gt;&quot;DEL_REASON&quot;:&quot;&quot;,&quot;NAME&quot;:&quot;仲苏鹏&quot;,&quot;AUTH_ID&quot;:&quot;LA202302102159319360dEU5xPci&quot;,&quot;ROLE&quot;:&quot;1&quot;,&quot;ENT_NAME&quot;:&quot;儋州幕佳嘉选百货商行（个人独资）&quot;,&quot;CREATED&quot;:1677082198563,&quot;OPENID&quot;:&quot;oiEYl0fBmYkGqbqkwwwa7GCghOtg&quot;,&quot;DOWN_TYPE&quot;:&quot;00&quot;,&lt;br&gt;&quot;HASH_ID&quot;:&quot;uWIrrWz7G3kPC5zcuijX653c28mUC1LDhBqI/7MIWMI=&quot;,&quot;BUSS_TYPE&quot;:&quot;1&quot;,&quot;ORG_CODE&quot;:&quot;91460000MABLK6P783&quot;,&lt;br&gt;&quot;TERNIMAL_TYPE&quot;:&quot;105&quot;,&quot;TOKEN&quot;:&quot;WtACWTQUgIQoD-7FtUsIX7cdDwtNK6lWPdcpGxWihy4TSrwZk2Zru2W_ug8DjiMRcVl5iqYogA1kHAem766x-ya8QFry2G7bFyFKBooud74=&quot;}" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-560" y="1381" width="720" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
