@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T06:20:34.787Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="q49oz84fhcGAGWepPvrg" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-27T08:36:32.163Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="Yy9r3WtaRUHJLvNF4op5" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-8" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="1730" y="3210" width="300" height="270" as="geometry" />
+        </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-13" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;" parent="1" vertex="1">
           <mxGeometry x="1020" y="2170" width="980" height="460" as="geometry" />
         </mxCell>
@@ -506,14 +509,14 @@
         <mxCell id="fpK7iS9B7lr3rAS34iEF-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="fpK7iS9B7lr3rAS34iEF-17" target="fpK7iS9B7lr3rAS34iEF-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fpK7iS9B7lr3rAS34iEF-17" value="创建ResultStage和ActiveJob，并将两者进行关联" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
+        <mxCell id="fpK7iS9B7lr3rAS34iEF-17" value="创建ResultStage和ActiveJob，并将两者进行关联&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="1093.38" y="3290" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-20" value="DAGScheduler#submitStage(&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; rdd: RDD[T],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; func: (TaskContext, Iterator[T]) =&amp;gt; U,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; partitions: Seq[Int],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; callSite: CallSite,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; resultHandler: (Int, U) =&amp;gt; Unit,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; properties: Properties): JobWaiter[U]&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1050.7" y="3380" width="286.62" height="140" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-25" value="ActiveJob接收的stage有两种类型&lt;br&gt;- Resultstage&lt;br&gt;&amp;nbsp; &amp;nbsp;由action算子产生的stage&lt;br&gt;-&amp;nbsp;ShuffleMapStage&lt;br&gt;&amp;nbsp; &amp;nbsp;由transform产生的stage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="1410" y="3245" width="280" height="85" as="geometry" />
+          <mxGeometry x="1710" y="3075" width="280" height="85" as="geometry" />
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="fpK7iS9B7lr3rAS34iEF-25" target="fpK7iS9B7lr3rAS34iEF-17" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -522,7 +525,47 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="fpK7iS9B7lr3rAS34iEF-27" value="func:&lt;br&gt;callSite: 调用点，触发spark action方法的用户代码的位置&lt;br&gt;resultHandler:&lt;br&gt;properties:" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="1410" y="3380" width="280" height="100" as="geometry" />
+          <mxGeometry x="1390" y="3490" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-4" target="fpK7iS9B7lr3rAS34iEF-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="970" y="3225" as="sourcePoint" />
+            <mxPoint x="1210" y="3115" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="970" y="3255" />
+              <mxPoint x="970" y="3085" />
+              <mxPoint x="1194" y="3085" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-2" value="根据上一步的ShuffleMapStage&lt;br&gt;创建ResultStage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1757" y="3430" width="246" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-3" target="dQKbh80O4o_hzA0gJbdG-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-3" value="DAGScheduler#getOrCreateParentStages&lt;br&gt;创建父stage（ShuffleMapStage）" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1740" y="3310" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-5" target="dQKbh80O4o_hzA0gJbdG-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-5" value="DAGScheduler#createResultStage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1757" y="3220" width="246" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fpK7iS9B7lr3rAS34iEF-17" target="dQKbh80O4o_hzA0gJbdG-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1480" y="3410" as="sourcePoint" />
+            <mxPoint x="1757" y="3285" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1293" y="3350" />
+              <mxPoint x="1560" y="3350" />
+              <mxPoint x="1560" y="3240" />
+              <mxPoint x="1670" y="3240" />
+              <mxPoint x="1670" y="3180" />
+              <mxPoint x="1880" y="3180" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
