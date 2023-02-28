@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-27T02:05:57.721Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="5DeSpzcgfxECM3mSWDpb" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T00:45:42.796Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="LzZPqBHxB4Wkbg_0c7rU" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -856,6 +856,50 @@
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-6" value="投资任职查询" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry y="2050" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-10" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-14" target="dErfdyEedOs2bl96Plfb-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="2403" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-12" value="&lt;div style=&quot;border-color: var(--border-color); font-size: 15px;&quot;&gt;MySQL&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;yyfx.app_info&lt;br&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="623" y="2373" width="197" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-14" value="app_center_mysql" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="320" y="2378" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-17" target="dErfdyEedOs2bl96Plfb-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="2340" />
+              <mxPoint x="280" y="2403" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-17" value="达梦&lt;br&gt;应用信息&lt;br&gt;licence_auth.app_info" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-15.5" y="2310" width="197.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-20" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-48.75" y="2410" width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-19" value="前置信息库" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FFD966;verticalAlign=top;" vertex="1" parent="dErfdyEedOs2bl96Plfb-20">
+          <mxGeometry width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-9" value="达梦&lt;br&gt;前置信息（省局）&lt;br&gt;licence_auth.fronted_sys_info" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="dErfdyEedOs2bl96Plfb-20">
+          <mxGeometry x="25" y="38" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-18" value="达梦&lt;br&gt;前置信息（总局）&lt;br&gt;licence_auth.app_system_config" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fontSize=14;align=center;" vertex="1" parent="dErfdyEedOs2bl96Plfb-20">
+          <mxGeometry x="21.25" y="118" width="217.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.067;entryY=0.568;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-19" target="dErfdyEedOs2bl96Plfb-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="2470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="2505" />
+              <mxPoint x="280" y="2403" />
+              <mxPoint x="333" y="2403" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
