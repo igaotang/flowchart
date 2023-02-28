@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T03:33:04.106Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="hX66QCfHz7Ke7UWk7VKF" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T03:42:04.828Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="KYPBPtiydcKO7pKUEgQl" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
-    <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -909,6 +909,9 @@
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-26" value="实时任务由于不能将日志中的市场主体信息保存到Hive中相应的表中，所以统计截止到现在的存续企业的数量需要结合MySQL中昨日的存续企业数、日志文件中各种状态的企业数进行运算获得" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="910" y="1308" width="269" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-27" value="日志文件中缺少市场主体的类型字段，需要查询Hive中市场主体库enterprise来获取，所以需要market_inserthive任务先于本任务运行，否则无法拿到最新的昨日的市场主体信息" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="271" y="994" width="269" height="48" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
