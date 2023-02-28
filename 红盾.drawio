@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T06:37:29.958Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="qz1ARV6Ln83CFoN1XIGH" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T06:58:48.489Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="JRJSskWgpfNmOTlccsSk" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -530,6 +530,10 @@
         <mxCell id="h7imEG4-RPFQQV8rX1tC-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;fontSize=14;" parent="1" source="h7imEG4-RPFQQV8rX1tC-12" target="Agi0m2Bdz71Y0sU2h22X-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="860" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="820" y="700" />
+              <mxPoint x="820" y="765" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="h7imEG4-RPFQQV8rX1tC-16" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;fontSize=14;" parent="1" source="h7imEG4-RPFQQV8rX1tC-12" target="Agi0m2Bdz71Y0sU2h22X-22" edge="1">
@@ -934,7 +938,13 @@
           <mxGeometry x="299.5" y="730" width="269" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-34" value="从business_licence_employ里得到昨日及迄今为止所有的使用量" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="671" y="750" width="184" height="40" as="geometry" />
+          <mxGeometry x="1050" y="660" width="184" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-35" value="从business_licence_employ里得到按照应用统计的使用量（全量覆盖原有数据）" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="660" y="752.5" width="184" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-36" value="需要从MySQL中得到昨天的数据，再结合日志数据进行统计" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="855" y="1120" width="345" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
