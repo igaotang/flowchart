@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T06:28:37.656Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="wPbiw8IFZJr7rHXLBqTB" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T06:37:29.958Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="qz1ARV6Ln83CFoN1XIGH" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -501,9 +501,10 @@
         <mxCell id="h7imEG4-RPFQQV8rX1tC-20" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;fontSize=14;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Agi0m2Bdz71Y0sU2h22X-4" target="h7imEG4-RPFQQV8rX1tC-17" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
+              <mxPoint x="515" y="851" />
               <mxPoint x="515" y="850" />
-              <mxPoint x="830" y="850" />
-              <mxPoint x="830" y="800" />
+              <mxPoint x="1000" y="850" />
+              <mxPoint x="1000" y="800" />
               <mxPoint x="1150" y="800" />
               <mxPoint x="1150" y="730" />
             </Array>
@@ -928,6 +929,12 @@
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-31" value="基于和离线任务同样的原因，需要根据enterprise表得到市场主体类型，而enterprise表只会在对应的连线任务中更新，所以实时任务运行时有可能存在在执照中得到的统一社会信用代码在enterprise表中不存在的情况，从而丢失这部分数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="270" y="1060" width="639" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-33" value="需要从Hive中的licenses拿到执照类型，所以需要license_inserthive先于本任务执行" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="299.5" y="730" width="269" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-34" value="从business_licence_employ里得到昨日及迄今为止所有的使用量" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="671" y="750" width="184" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
