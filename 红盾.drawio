@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T06:58:48.489Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="JRJSskWgpfNmOTlccsSk" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T07:03:14.708Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="520uFsltImVy4ZtHVHaA" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
-    <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -932,7 +932,7 @@
           <mxGeometry x="860" y="870" width="345" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-31" value="基于和离线任务同样的原因，需要根据enterprise表得到市场主体类型，而enterprise表只会在对应的连线任务中更新，所以实时任务运行时有可能存在在执照中得到的统一社会信用代码在enterprise表中不存在的情况，从而丢失这部分数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="270" y="1060" width="639" height="48" as="geometry" />
+          <mxGeometry x="270" y="1062" width="639" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-33" value="需要从Hive中的licenses拿到执照类型，所以需要license_inserthive先于本任务执行" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="299.5" y="730" width="269" height="40" as="geometry" />
@@ -943,8 +943,26 @@
         <mxCell id="dErfdyEedOs2bl96Plfb-35" value="从business_licence_employ里得到按照应用统计的使用量（全量覆盖原有数据）" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="660" y="752.5" width="184" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-36" value="需要从MySQL中得到昨天的数据，再结合日志数据进行统计" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="855" y="1120" width="345" height="30" as="geometry" />
+        <mxCell id="dErfdyEedOs2bl96Plfb-36" value="需要从MySQL中的license_receive表&lt;br&gt;得到昨天的数据，再结合日志数据进行统计" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1112" width="235" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-37" value="需要从MySQL中的licence_use表&lt;br&gt;得到昨天的数据，再结合日志数据进行统计" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="807.5" width="235" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="1070" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="805" />
+              <mxPoint x="530" y="960" />
+              <mxPoint x="510" y="960" />
+              <mxPoint x="510" y="1040" />
+              <mxPoint x="440" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-39" value="与执照下载的实时统任务存在同样的问题" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="322.5" y="790" width="127.5" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
