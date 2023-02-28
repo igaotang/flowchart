@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T00:43:06.886Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="ltZ3DcSbp4ApkyC18OK3" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-28T01:54:55.003Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="lAsYzSrIZB15qPGAU6X0" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -654,11 +654,17 @@
         <mxCell id="dQKbh80O4o_hzA0gJbdG-30" value="NettyRpcEnv#send" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1071.01" y="4390" width="246" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-32" target="dQKbh80O4o_hzA0gJbdG-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dQKbh80O4o_hzA0gJbdG-32" value="Dispatcher#postOneWayMessage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="970" y="4540" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dQKbh80O4o_hzA0gJbdG-34" value="NettyRpcEnv#postToOutbox" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1260" y="4540" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-40" value="Dispatcher&lt;br&gt;创建时会启动一个线程池，同时提交Runnable任务MessageLoop，它会循环不断地从阻塞队列中获取提交的消息发送任务进行处理。&lt;br&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; private val threadpool: ThreadPoolExecutor = {&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val availableCores =&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if (numUsableCores &amp;gt; 0) numUsableCores else Runtime.getRuntime.availableProcessors()&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val numThreads = nettyEnv.conf.getInt(&quot;spark.rpc.netty.dispatcher.numThreads&quot;,&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; math.max(2, availableCores))&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val pool = ThreadUtils.newDaemonFixedThreadPool(numThreads, &quot;dispatcher-event-loop&quot;)&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; for (i &amp;lt;- 0 until numThreads) {&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pool.execute(new MessageLoop)&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; pool&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="414" y="4440" width="482.25" height="320" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
