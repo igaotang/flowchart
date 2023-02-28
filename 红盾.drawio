@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T06:18:50.688Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="o_GcGLWfW8hYnU1vMtso" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T06:28:37.656Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="wPbiw8IFZJr7rHXLBqTB" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -586,8 +586,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="490" y="1110" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="910" y="1127" />
-              <mxPoint x="910" y="1070" />
+              <mxPoint x="1100" y="1127" />
+              <mxPoint x="1100" y="1070" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -752,6 +752,8 @@
             <Array as="points">
               <mxPoint x="240" y="968" />
               <mxPoint x="240" y="1110" />
+              <mxPoint x="270" y="1110" />
+              <mxPoint x="270" y="1127" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -795,7 +797,7 @@
         <mxCell id="Agi0m2Bdz71Y0sU2h22X-14" value="query_log" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="299.5" y="2055" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Agi0m2Bdz71Y0sU2h22X-15" value="query_log_now" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
+        <mxCell id="Agi0m2Bdz71Y0sU2h22X-15" value="query_log_now" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="299.5" y="2145" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Agi0m2Bdz71Y0sU2h22X-16" value="market_players_hive" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" parent="1" vertex="1">
@@ -923,6 +925,9 @@
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-30" value="分别按照营业执照序列号、统一社会信用代码分组统计（自然、或者前一）周、月、季度、年的数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="860" y="870" width="345" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-31" value="基于和离线任务同样的原因，需要根据enterprise表得到市场主体类型，而enterprise表只会在对应的连线任务中更新，所以实时任务运行时有可能存在在执照中得到的统一社会信用代码在enterprise表中不存在的情况，从而丢失这部分数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="1060" width="639" height="48" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
