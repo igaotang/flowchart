@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T00:22:33.240Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="mJZ3EfS1SNi0OYfQy8HX" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-02-28T00:27:09.936Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="tRCqmLprkfZAseewV6sr" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -635,8 +635,30 @@
         <mxCell id="dQKbh80O4o_hzA0gJbdG-28" value="NettyRpcEndpointRef#send" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1071.01" y="4280" width="246" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-30" target="dQKbh80O4o_hzA0gJbdG-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-37" value="本地RPC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dQKbh80O4o_hzA0gJbdG-35">
+          <mxGeometry x="0.107" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-30" target="dQKbh80O4o_hzA0gJbdG-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-38" value="远程RPC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dQKbh80O4o_hzA0gJbdG-36">
+          <mxGeometry x="-0.1425" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="dQKbh80O4o_hzA0gJbdG-30" value="NettyRpcEnv#send" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1071.01" y="4390" width="246" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-32" value="Dispatcher#postOneWayMessage" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="4540" width="225" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dQKbh80O4o_hzA0gJbdG-34" value="NettyRpcEnv#postToOutbox" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="4540" width="180" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
