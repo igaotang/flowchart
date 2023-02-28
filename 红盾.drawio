@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-02-28T00:45:42.796Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="LzZPqBHxB4Wkbg_0c7rU" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-28T03:15:54.303Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="JGimUSzz3chtrq8GmX8z" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -900,6 +900,12 @@
               <mxPoint x="333" y="2403" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-23" value="市场主体库enterprise每次运行都会用最新的数据进行覆盖，也即每个市场主体只会保留最新状态的一条记录，enterprise_log则保留由全量数据加上历史变更记录" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="418" y="1257" width="269" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="dErfdyEedOs2bl96Plfb-25" value="由enterprise得到总的存续企业总量&lt;br&gt;由enterprise_log得到昨日的业务操作统计数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="745" y="1162" width="269" height="48" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
