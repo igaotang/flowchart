@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-01T07:41:39.159Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="F7rv5MgR1vVbm-CMQnCr" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-01T08:33:00.727Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="oENS4qEWhawW_wny76zG" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
-    <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -985,26 +985,8 @@
         <mxCell id="dErfdyEedOs2bl96Plfb-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontSize=18;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-43" target="dErfdyEedOs2bl96Plfb-42">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-43" value="下载服务" style="shape=delay;whiteSpace=wrap;html=1;fillColor=none;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="1035.7" width="130" height="64.25" as="geometry" />
-        </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontSize=18;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-44" target="dErfdyEedOs2bl96Plfb-42">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-44" value="验证服务" style="shape=delay;whiteSpace=wrap;html=1;fillColor=none;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="1137.45" width="130" height="64.25" as="geometry" />
-        </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontSize=18;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-45" target="dErfdyEedOs2bl96Plfb-42">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-45" value="受理服务" style="shape=delay;whiteSpace=wrap;html=1;fillColor=none;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="1249.95" width="130" height="64.25" as="geometry" />
-        </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontSize=18;" edge="1" parent="1" source="dErfdyEedOs2bl96Plfb-46" target="dErfdyEedOs2bl96Plfb-42">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-46" value="授权服务" style="shape=delay;whiteSpace=wrap;html=1;fillColor=none;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="1369.95" width="130" height="64.25" as="geometry" />
+        <mxCell id="dErfdyEedOs2bl96Plfb-43" value="各业务系统日志" style="shape=delay;whiteSpace=wrap;html=1;fillColor=none;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="1193" width="140" height="64.25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
