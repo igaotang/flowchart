@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-02T08:20:07.476Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="bihgznc556_LPo3N-vbZ" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-02T08:49:11.265Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="oAX2SDWXRc9QG04Yv4K9" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -675,17 +675,17 @@
         <mxCell id="ts6MQWhlQir7RedZAC-7-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-5" target="ts6MQWhlQir7RedZAC-7-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-5" value="LocalEndpoint#receive" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="402" y="5580" width="225" height="40" as="geometry" />
+        <mxCell id="ts6MQWhlQir7RedZAC-7-5" value="LocalEndpoint#receive&lt;br&gt;处理发送ReviveOffers消息" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="597.5" y="5610" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-7" target="ts6MQWhlQir7RedZAC-7-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-7" value="LocalEndpoint#reviveOffers" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="402" y="5670" width="225" height="40" as="geometry" />
+          <mxGeometry x="597.5" y="5690.22" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-9" value="Executor#launchTask&lt;br&gt;创建TaskRunner并提交给线程池运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="394.5" y="5750" width="240" height="50" as="geometry" />
+          <mxGeometry x="590" y="5770.22" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-11" target="ts6MQWhlQir7RedZAC-7-12">
           <mxGeometry relative="1" as="geometry" />
@@ -782,6 +782,9 @@
         <mxCell id="ts6MQWhlQir7RedZAC-7-43" value="RpcEndpoint#receiveAndReply" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="152" y="5443" width="225" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-44" target="ts6MQWhlQir7RedZAC-7-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-44" value="RpcEndpoint#receive" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="402" y="5443" width="225" height="40" as="geometry" />
         </mxCell>
@@ -830,7 +833,29 @@
           <mxGeometry x="251.12" y="5130" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-64" value="LocalSchedulerBackend" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="644.75" y="5750" width="160" height="25" as="geometry" />
+          <mxGeometry x="840.25" y="5770.22" width="160" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-65" target="ts6MQWhlQir7RedZAC-7-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-72" value="LocalEndpoint" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ts6MQWhlQir7RedZAC-7-67">
+          <mxGeometry x="0.6958" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-65" target="ts6MQWhlQir7RedZAC-7-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-71" value="CoarseGrainedExecutorBackend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ts6MQWhlQir7RedZAC-7-70">
+          <mxGeometry x="0.6733" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-65" value="EndPoint" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="462.13" y="5526" width="104.75" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-69" value="CoarseGrainedExecutorBackend#receive" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="5610" width="270" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
