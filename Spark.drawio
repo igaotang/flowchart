@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-02T06:19:28.993Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="HrEj7tI-LT6Diwq0im-f" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-02T08:20:07.476Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="bihgznc556_LPo3N-vbZ" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -672,31 +672,20 @@
         <mxCell id="dQKbh80O4o_hzA0gJbdG-40" value="Dispatcher&lt;br&gt;创建时会启动一个线程池，同时提交Runnable任务MessageLoop，它会循环不断地从阻塞队列中获取提交的消息发送任务进行处理。&lt;br&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; private val threadpool: ThreadPoolExecutor = {&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val availableCores =&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if (numUsableCores &amp;gt; 0) numUsableCores else Runtime.getRuntime.availableProcessors()&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val numThreads = nettyEnv.conf.getInt(&quot;spark.rpc.netty.dispatcher.numThreads&quot;,&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; math.max(2, availableCores))&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val pool = ThreadUtils.newDaemonFixedThreadPool(numThreads, &quot;dispatcher-event-loop&quot;)&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; for (i &amp;lt;- 0 until numThreads) {&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pool.execute(new MessageLoop)&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; pool&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="414" y="4440" width="482.25" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="ts6MQWhlQir7RedZAC-7-3">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="389.5" y="5530" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-3" target="ts6MQWhlQir7RedZAC-7-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-3" value="Inbox#process" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="277" y="5580" width="225" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-5" target="ts6MQWhlQir7RedZAC-7-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-5" value="LocalEndpoint#receive" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="277" y="5670" width="225" height="40" as="geometry" />
+          <mxGeometry x="402" y="5580" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-7" target="ts6MQWhlQir7RedZAC-7-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-7" value="LocalEndpoint#reviveOffers" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="277" y="5760" width="225" height="40" as="geometry" />
+          <mxGeometry x="402" y="5670" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-9" value="Executor#launchTask&lt;br&gt;创建TaskRunner并提交给线程池运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="269.5" y="5840" width="240" height="50" as="geometry" />
+          <mxGeometry x="394.5" y="5750" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-11" target="ts6MQWhlQir7RedZAC-7-12">
           <mxGeometry relative="1" as="geometry" />
@@ -839,6 +828,9 @@
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-61" value="调用EndpointData的方法处理&lt;br&gt;data.inbox.process(Dispatcher.this)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="251.12" y="5130" width="225" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-64" value="LocalSchedulerBackend" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="644.75" y="5750" width="160" height="25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
