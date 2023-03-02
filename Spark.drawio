@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-02T06:18:20.452Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="14MRytVDCO4MF8Zfas7U" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-02T06:19:28.993Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="HrEj7tI-LT6Diwq0im-f" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -672,11 +672,10 @@
         <mxCell id="dQKbh80O4o_hzA0gJbdG-40" value="Dispatcher&lt;br&gt;创建时会启动一个线程池，同时提交Runnable任务MessageLoop，它会循环不断地从阻塞队列中获取提交的消息发送任务进行处理。&lt;br&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; private val threadpool: ThreadPoolExecutor = {&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val availableCores =&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if (numUsableCores &amp;gt; 0) numUsableCores else Runtime.getRuntime.availableProcessors()&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val numThreads = nettyEnv.conf.getInt(&quot;spark.rpc.netty.dispatcher.numThreads&quot;,&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; math.max(2, availableCores))&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; val pool = ThreadUtils.newDaemonFixedThreadPool(numThreads, &quot;dispatcher-event-loop&quot;)&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; for (i &amp;lt;- 0 until numThreads) {&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pool.execute(new MessageLoop)&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; pool&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="414" y="4440" width="482.25" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-1" target="ts6MQWhlQir7RedZAC-7-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-1" value="调用EndpointData的方法处理&lt;br&gt;data.inbox.process(Dispatcher.this)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="277" y="5490" width="225" height="40" as="geometry" />
+        <mxCell id="ts6MQWhlQir7RedZAC-7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="ts6MQWhlQir7RedZAC-7-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="389.5" y="5530" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-3" target="ts6MQWhlQir7RedZAC-7-5">
           <mxGeometry relative="1" as="geometry" />
@@ -770,7 +769,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-38" value="Inbox#process" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="252" y="5130" width="225" height="40" as="geometry" />
+          <mxGeometry x="251.35" y="5230" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-41" target="ts6MQWhlQir7RedZAC-7-43">
           <mxGeometry relative="1" as="geometry" />
@@ -789,13 +788,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-41" value="InboxMessage" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="311.24" y="5207" width="104.75" height="54" as="geometry" />
+          <mxGeometry x="311.24" y="5300" width="104.75" height="54" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-43" value="RpcEndpoint#receiveAndReply" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="152" y="5350" width="225" height="40" as="geometry" />
+          <mxGeometry x="152" y="5443" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-44" value="RpcEndpoint#receive" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="402" y="5350" width="225" height="40" as="geometry" />
+          <mxGeometry x="402" y="5443" width="225" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-49" target="ts6MQWhlQir7RedZAC-7-51">
           <mxGeometry relative="1" as="geometry" />
@@ -823,7 +822,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ts6MQWhlQir7RedZAC-7-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-57" target="ts6MQWhlQir7RedZAC-7-38">
+        <mxCell id="ts6MQWhlQir7RedZAC-7-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-57" target="ts6MQWhlQir7RedZAC-7-61">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-57" value="Dispatcher#MessageLoop#run&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; override def run(): Unit = {&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while (true) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; try {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; val data = receivers.take()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (data == PoisonPill) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Put PoisonPill back so that other MessageLoops can see it.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; receivers.offer(PoisonPill)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; data.inbox.process(Dispatcher.this)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
@@ -834,6 +833,12 @@
             <mxPoint x="260" y="4660" as="sourcePoint" />
             <mxPoint x="186" y="4700" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-61" target="ts6MQWhlQir7RedZAC-7-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ts6MQWhlQir7RedZAC-7-61" value="调用EndpointData的方法处理&lt;br&gt;data.inbox.process(Dispatcher.this)" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="251.12" y="5130" width="225" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
