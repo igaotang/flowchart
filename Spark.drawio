@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-03T07:12:50.895Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="HoDHi3qa2r9DSfa_vi9X" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-03T07:36:15.437Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="mqcRep5HrtOOUFrdXYEC" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="2389" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -684,7 +684,7 @@
         <mxCell id="ts6MQWhlQir7RedZAC-7-7" value="LocalEndpoint#reviveOffers" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="1102.5" y="5920" width="174.75" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1DeVd_PK0lltjMOwuueJ-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-9" target="1DeVd_PK0lltjMOwuueJ-44">
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="ts6MQWhlQir7RedZAC-7-9" target="1DeVd_PK0lltjMOwuueJ-44">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ts6MQWhlQir7RedZAC-7-9" value="Executor#launchTask&lt;br&gt;创建TaskRunner并提交给线程池运行" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
@@ -1125,11 +1125,59 @@
         <mxCell id="1DeVd_PK0lltjMOwuueJ-39" value="Worker#receiveAndReply" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="-159.99" y="5630" width="160.26" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1DeVd_PK0lltjMOwuueJ-44" value="TaskRunner#run()" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="1129.88" y="6120" width="120" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-46" value="参考：&lt;br&gt;&lt;a href=&quot;https://aiops.com/news/post/4477.html&quot;&gt;https://aiops.com/news/post/4477.html&lt;/a&gt;&lt;br&gt;https://zhuanlan.zhihu.com/p/541505732" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1420" y="10" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-66" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1050" y="6100" width="290" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-44" value="TaskRunner" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=top;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="-5.74" width="290" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-47" value="1. 设置任务的状态为TaskState.RUNNING" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="71.58999999999992" y="30" width="143.38" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-48" value="2. 得到反序列化后Task" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="83.16000000000008" y="110" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-47" target="1DeVd_PK0lltjMOwuueJ-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-50" value="3. 运行Task&lt;br&gt;Task#run" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="83.16000000000008" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-48" target="1DeVd_PK0lltjMOwuueJ-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-52" value="4. Task#runTask" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="83.7800000000002" y="250" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-50" target="1DeVd_PK0lltjMOwuueJ-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-56" value="5. 根据返回的结果创建DirectTaskResult， 然后序列化得到序列化后的结果" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="36.16000000000008" y="330" width="215.99" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-52" target="1DeVd_PK0lltjMOwuueJ-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-58" value="6. 更新任务的状态为TaskState.FINISHED，并将结果返回&lt;br&gt;ExecutorBackend#statusUpdate" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="21.00999999999999" y="430" width="246.3" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-56" target="1DeVd_PK0lltjMOwuueJ-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-60" value="7. NettyRpcEndpointRef#send" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="43.799999999999955" y="510" width="202.4" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-58" target="1DeVd_PK0lltjMOwuueJ-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-61" value="8. NettyRpcEnv#send" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1DeVd_PK0lltjMOwuueJ-66">
+          <mxGeometry x="61.25" y="580" width="167.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-60" target="1DeVd_PK0lltjMOwuueJ-61">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
