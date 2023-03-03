@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-03T06:38:37.747Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="Tbcx6vkiRhzfR_W21oH5" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-03T06:47:26.262Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="uMOoS3s_QqVwSix4CLxA" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="2629" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1107,6 +1107,12 @@
         </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-19" value="ExecutorData.executorEndpoint.send(LaunchTask(new SerializableBuffer(serializedTask)))" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="1490" y="6160" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-28" value="Worker" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1993" y="5610" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-29" value="Master" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="2100" y="5610" width="75" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
