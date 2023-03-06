@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-06T06:51:22.318Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="2hvIFw4F7BoZ8O_t5PFu" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-06T06:52:40.938Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="kTRVAQPyUZdDNP-mZaHI" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1222,6 +1222,18 @@
         </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-77" value="HDFSCacheTaskLocation&lt;br&gt;数据存储在HDFS上" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="2300" y="3685" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dQKbh80O4o_hzA0gJbdG-12" target="1DeVd_PK0lltjMOwuueJ-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1322.21" y="3690" as="sourcePoint" />
+            <mxPoint x="1438.21" y="3630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="1DeVd_PK0lltjMOwuueJ-70" target="1DeVd_PK0lltjMOwuueJ-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2052" y="3580" as="sourcePoint" />
+            <mxPoint x="2084" y="3530" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
