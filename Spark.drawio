@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-06T06:44:52.432Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="Yoey8jgV7vPZ9zefO34-" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-06T06:51:22.318Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="2hvIFw4F7BoZ8O_t5PFu" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1201,6 +1201,27 @@
         </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-72" value="SparkContext#clean&lt;br&gt;在runjob之前一般会有一个清理操作，以确保执行过程中用到的对象可以被序列化" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="56.35" y="2980" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-74" value="TaskLocation" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="2189.06" y="3600" width="96" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="1DeVd_PK0lltjMOwuueJ-75" target="1DeVd_PK0lltjMOwuueJ-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-75" value="ExecutorCacheTaskLocation&lt;br&gt;代表数据已经被cache了，正是PROCESS_LOCAL情况" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="3685" width="186" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="1DeVd_PK0lltjMOwuueJ-76" target="1DeVd_PK0lltjMOwuueJ-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-76" value="HostTaskLocation&lt;br&gt;数据存储在同worker上" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="2180.12" y="3685" width="113.88" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="1DeVd_PK0lltjMOwuueJ-77" target="1DeVd_PK0lltjMOwuueJ-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-77" value="HDFSCacheTaskLocation&lt;br&gt;数据存储在HDFS上" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="2300" y="3685" width="170" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
