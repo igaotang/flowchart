@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-06T03:22:51.077Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="0_AN1bRzITSHTKgejzjD" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-06T06:08:41.129Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="jp1ZVFE4aKRlkNA-FIYs" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1004,7 +1004,7 @@
           <mxGeometry x="-791" y="2290" width="460" height="150" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-16" value="Spark" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#67AB9F;strokeColor=#36393d;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="-811" y="2088" width="400" height="150" as="geometry" />
+          <mxGeometry x="-710" y="2088" width="299" height="150" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-17" value="关系型数据存储层" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#eeeeee;strokeColor=#36393d;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="-811" y="1957" width="500" height="120" as="geometry" />
@@ -1040,13 +1040,10 @@
           <mxGeometry x="-553" y="2330" width="210" height="45" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-33" value="实时任务" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
-          <mxGeometry x="-601" y="2125" width="177" height="100" as="geometry" />
+          <mxGeometry x="-556" y="2125" width="136" height="100" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-34" value="任务调度&lt;br&gt;（Azkaban）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#A9C4EB;strokeColor=#36393d;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="-401" y="2088" width="90" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-35" value="离线任务" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
-          <mxGeometry x="-796" y="2125" width="177" height="100" as="geometry" />
+          <mxGeometry x="-811" y="2088" width="90" height="150" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-36" value="MySQL" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="-793" y="1997" width="225" height="70" as="geometry" />
@@ -1080,6 +1077,12 @@
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-51" value="管理日志" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;imageWidth=24;" vertex="1" parent="1">
           <mxGeometry x="-475" y="2793.5" width="155" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-52" value="资源调度&lt;br&gt;（Yarn）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#A9C4EB;strokeColor=#36393d;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="-401" y="2090" width="90" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-53" value="实时任务" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="-702" y="2125" width="136" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
