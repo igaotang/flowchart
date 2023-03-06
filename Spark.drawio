@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-06T03:35:57.765Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="8CwE0CVtyjxlJVe4GVGq" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-06T03:46:38.917Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="OWRQNinODhcxHv37lmWP" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -388,17 +388,20 @@
         <mxCell id="IJuBd549jqMZ3XzgCkh1-8" value="SparkPlan#doExecute()" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="381.87" y="2870" width="199.69" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="8siI0z8Bu0LZt-7pcZ8k-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-2" target="8siI0z8Bu0LZt-7pcZ8k-6" edge="1">
+        <mxCell id="8siI0z8Bu0LZt-7pcZ8k-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="1DeVd_PK0lltjMOwuueJ-72" target="8siI0z8Bu0LZt-7pcZ8k-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-2" target="1DeVd_PK0lltjMOwuueJ-72">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-2" value="RDD#collect()" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
-          <mxGeometry x="131.35" y="2950" width="120" height="40" as="geometry" />
+          <mxGeometry x="130.93" y="2923" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="8siI0z8Bu0LZt-7pcZ8k-6" target="aiSqFYhptoILfyd779yY-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-6" value="SparkContext#runJob&lt;br&gt;所有Spark action的主入口" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="104.66" y="3030" width="173.39" height="40" as="geometry" />
+          <mxGeometry x="104.66" y="3050" width="173.39" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8siI0z8Bu0LZt-7pcZ8k-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="IJuBd549jqMZ3XzgCkh1-6" target="IJuBd549jqMZ3XzgCkh1-7" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -459,7 +462,8 @@
             <mxPoint x="671" y="3060" as="sourcePoint" />
             <mxPoint x="820" y="3080" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="580" y="3050" />
+              <mxPoint x="610" y="3190" />
+              <mxPoint x="610" y="3050" />
               <mxPoint x="820" y="3050" />
             </Array>
           </mxGeometry>
@@ -1194,6 +1198,9 @@
         </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-71" value="每个action算子生成一个job" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="290" y="2138" width="174" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-72" value="SparkContext#clean&lt;br&gt;在runjob之前一般会有一个清理操作，以确保执行过程中用到的对象可以被序列化" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="56.35" y="2980" width="270" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
