@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-06T03:46:38.917Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="OWRQNinODhcxHv37lmWP" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-06T06:44:52.432Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="Yoey8jgV7vPZ9zefO34-" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1193,8 +1193,8 @@
         <mxCell id="1DeVd_PK0lltjMOwuueJ-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-60" target="1DeVd_PK0lltjMOwuueJ-61">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="1DeVd_PK0lltjMOwuueJ-70" value="TaskLocality&lt;br&gt;PROCESS_LOCAL:&amp;nbsp;task处理的是executor缓存里的数据，速度最快，优先级最高，优先分配&lt;br&gt;NODE_LOCAL:&amp;nbsp;task处理的数据和task在同一节点上，但不在内存中，比如HDFS上的文件可能有一个副本是在本机上的，那就采用NODE_LOCAL策略&lt;br&gt;NO_PREF:&amp;nbsp;没有优先级，task在哪台机器行执行都可以，在shuffle之后的task中比较常见&lt;br&gt;RACK_LOCAL:&amp;nbsp;spark计算节点上没有要处理的数据，但是和数据所在的机器处在同一个机架上，此时应该采用RACK_LOCAL策略&lt;br&gt;ANY:&amp;nbsp;数据既不在spark计算节点上也不再同一机架上，此时task要跨机架获取数据，获取速度最慢优先级最低，最后分配&lt;br&gt;&lt;br&gt;localityWaits ：一个包含了每种本地级别的等待时间的列表，默认是3s。等待时间这个概念大致指的就是每种本地策略分配任务需要锁定的时间，这个在后面会有具体分析" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="1348.25" y="3590" width="621.75" height="230" as="geometry" />
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-70" value="Task Locality Level:&lt;br&gt;PROCESS_LOCAL:&amp;nbsp;数据和task在同一个Executor中，中间无需任何数据传输，效率最高，如cache后的数据一般就是这种&lt;br&gt;NODE_LOCAL:&amp;nbsp;数据和task在同一个worker上，但是他们在不同的Executor，或者在HDFS上，这个效率稍慢一些，需要从文件读或者进程间传输&lt;br&gt;NO_PREF:&amp;nbsp;数据从哪里访问都一样快，不需要位置优先，一般是读取数据库里的数据会产生这 种Locality Level&lt;br&gt;RACK_LOCAL:&amp;nbsp;数据在同一机架的不同节点上，需要通过网络传输数据及文件 IO&lt;br&gt;ANY:&amp;nbsp;数据在非同一机架的网络上，速度最慢，出现跨集群传输数据才会有这种情况，一般不会出现&lt;br&gt;&lt;br&gt;localityWaits ：一个包含了每种本地级别的等待时间的列表，默认是3s。等待时间这个概念大致指的就是每种本地策略分配任务需要锁定的时间" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1348.25" y="3590" width="621.75" height="220" as="geometry" />
         </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-71" value="每个action算子生成一个job" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="290" y="2138" width="174" height="30" as="geometry" />
