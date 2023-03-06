@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-06T00:58:58.949Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="7ijKn70uo1O1OEaVMHYG" version="20.8.20" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-06T02:18:07.256Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="wDv81OsmAeKkpWEOYhtC" version="20.8.20" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1802" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1188,6 +1188,9 @@
         </mxCell>
         <mxCell id="1DeVd_PK0lltjMOwuueJ-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1DeVd_PK0lltjMOwuueJ-66" source="1DeVd_PK0lltjMOwuueJ-60" target="1DeVd_PK0lltjMOwuueJ-61">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1DeVd_PK0lltjMOwuueJ-70" value="TaskLocality&lt;br&gt;PROCESS_LOCAL:&amp;nbsp;task处理的是executor缓存里的数据，速度最快，优先级最高，优先分配&lt;br&gt;NODE_LOCAL:&amp;nbsp;task处理的数据和task在同一节点上，但不在内存中，比如HDFS上的文件可能有一个副本是在本机上的，那就采用NODE_LOCAL策略&lt;br&gt;NO_PREF:&amp;nbsp;没有优先级，task在哪台机器行执行都可以，在shuffle之后的task中比较常见&lt;br&gt;RACK_LOCAL:&amp;nbsp;spark计算节点上没有要处理的数据，但是和数据所在的机器处在同一个机架上，此时应该采用RACK_LOCAL策略&lt;br&gt;ANY:&amp;nbsp;数据既不在spark计算节点上也不再同一机架上，此时task要跨机架获取数据，获取速度最慢优先级最低，最后分配" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1348.25" y="3640" width="621.75" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
