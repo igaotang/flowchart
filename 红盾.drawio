@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-07T02:42:44.007Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="Qn_UyPWQS2Mg7AaRsZ91" version="20.8.20" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-07T06:40:33.302Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50" etag="nxJMhgkY1LwApOYjB8cg" version="20.8.20" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -991,7 +991,7 @@
         <mxCell id="dErfdyEedOs2bl96Plfb-43" value="各业务系统日志" style="shape=delay;whiteSpace=wrap;html=1;fillColor=none;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="-810" y="1193" width="140" height="64.25" as="geometry" />
         </mxCell>
-        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-3" value="受理库" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
+        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-3" value="授权库" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="-799" y="2874" width="130" height="33" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-6" value="大数据存储层" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#9AC7BF;strokeColor=#36393d;verticalAlign=top;" vertex="1" parent="1">
@@ -1051,7 +1051,7 @@
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-37" value="达梦" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="-548" y="1997" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-40" value="业务文本日志" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+        <mxCell id="3zKCGFx1Eqm4c3eWB4c1-40" value="业务日志" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;verticalAlign=top;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
           <mxGeometry x="-651" y="2754" width="341" height="160" as="geometry" />
         </mxCell>
         <mxCell id="3zKCGFx1Eqm4c3eWB4c1-41" value="日志提取&lt;br style=&quot;font-size: 16px;&quot;&gt;（Logstash）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;verticalAlign=middle;fillColor=#D4E1F5;strokeColor=#36393d;" vertex="1" parent="1">
