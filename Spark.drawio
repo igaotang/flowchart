@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-09T01:02:48.393Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63" etag="I9gMWf7_7eHXmAs6nDBX" version="21.0.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-09T01:19:16.030Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63" etag="yLa_CJ6hH3giXfaLwerq" version="21.0.2" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1369,8 +1369,8 @@
             <mxPoint x="1890" y="383" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="99DLMoNuBYmvFpYEHvyQ-48" value="&lt;div&gt;无论是直接使用 SQL 语句还是使用 DataFrame，都会经过如下步骤转换成 DAG 对 RDD 的操作：&lt;/div&gt;&lt;div&gt;- Parser 解析 SQL，生成 Unresolved Logical Plan，得到投影、连接、过滤等基本内容&lt;/div&gt;&lt;div&gt;- 由 Analyzer 结合 Catalog 信息生成 Resolved Logical Plan，在上一步的基础上加上数据类型、表结构（schema）等信息&lt;/div&gt;&lt;div&gt;- Optimizer根据预先定义好的规则对 Resolved Logical Plan 进行优化并生成 Optimized Logical Plan，常见优化如谓词下推、常量折叠、列裁剪等&lt;/div&gt;&lt;div&gt;- Query Planner 将 Optimized Logical Plan 转换成多个 Physical Plan&lt;/div&gt;&lt;div&gt;- CBO 根据 Cost Model 算出每个 Physical Plan 的代价并选取代价最小的 Physical Plan 作为最终的 Physical Plan&lt;/div&gt;&lt;div&gt;- Spark 以 DAG 的方法执行上述 Physical Plan&lt;/div&gt;&lt;div&gt;- 在执行 DAG 的过程中，Adaptive Execution 根据运行时信息动态调整执行计划从而提高执行效率&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;opacity=0;align=left;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="1365.25" y="555" width="467.5" height="200" as="geometry" />
+        <mxCell id="99DLMoNuBYmvFpYEHvyQ-48" value="&lt;div&gt;无论是直接使用 SQL 语句还是使用 DataFrame，都会经过如下步骤转换成 DAG 对 RDD 的操作：&lt;/div&gt;&lt;div&gt;- Parser 解析 SQL，生成 Unresolved Logical Plan，得到投影select、连接join、过滤where等基本内容&lt;/div&gt;&lt;div&gt;- 由 Analyzer 结合 Catalog 信息生成 Resolved Logical Plan，在上一步的基础上加上数据类型、表结构（schema）等信息&lt;/div&gt;&lt;div&gt;- Optimizer根据预先定义好的规则对 Resolved Logical Plan 进行优化并生成 Optimized Logical Plan，常见优化如谓词下推、常量折叠、列裁剪等&lt;/div&gt;&lt;div&gt;- Query Planner 将 Optimized Logical Plan 转换成多个 Physical Plan&lt;/div&gt;&lt;div&gt;- CBO 根据 Cost Model 算出每个 Physical Plan 的代价并选取代价最小的 Physical Plan 作为最终的 Physical Plan&lt;/div&gt;&lt;div&gt;- Spark 以 DAG 的方法执行上述 Physical Plan&lt;/div&gt;&lt;div&gt;- 在执行 DAG 的过程中，Adaptive Execution 根据运行时信息动态调整执行计划从而提高执行效率&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;join：broadcast join、hash join、shuffle join&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;聚合Aggregate：基于排序的聚合，基于hash的聚合，预聚合&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;opacity=0;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1365.25" y="555" width="467.5" height="305" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
