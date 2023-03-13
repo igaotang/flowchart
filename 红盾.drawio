@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T07:56:14.773Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69" etag="UFnNv2bC0jYZtxfLQoBX" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-13T08:03:45.356Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69" etag="A1qOVzAac2ykpNoXO1-H" version="21.0.6" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -918,8 +918,8 @@
         <mxCell id="dErfdyEedOs2bl96Plfb-27" value="日志文件中缺少市场主体的类型字段，需要查询Hive中市场主体库enterprise来获取，所以需要market_inserthive任务先于本任务运行，否则无法拿到最新的昨日的市场主体信息&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;licenses需要存储全量且包含历史变更的记录" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="271" y="994" width="479" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-28" value="由licenses得到昨日/全量数据（下载量、失效量、市场下载量）&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;所有数据的计算均基于Hive，这样在初始化和后续的周期任务可以调用相同的脚本&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="855" y="981" width="440" height="30" as="geometry" />
+        <mxCell id="dErfdyEedOs2bl96Plfb-28" value="由licenses得到昨日/全量数据（下载量、失效量、市场下载量）" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="855" y="995" width="440" height="29" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-29" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;fontSize=14;" parent="1" source="h7imEG4-RPFQQV8rX1tC-19" target="Agi0m2Bdz71Y0sU2h22X-17" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -934,14 +934,14 @@
         <mxCell id="dErfdyEedOs2bl96Plfb-30" value="分别按照营业执照序列号、统一社会信用代码分组统计（自然、或者前一）周、月、季度、年的数据，每次运行先清空licence_recevie_y" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="860" y="870" width="370" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-31" value="&lt;font color=&quot;#ff0000&quot;&gt;会基于MySQL中的历史统计来加速计算过程&lt;/font&gt;&lt;br&gt;基于和离线任务同样的原因，需要根据enterprise表得到市场主体类型，而enterprise表只会在对应的连线任务中更新，所以实时任务运行时有可能存在在执照中得到的统一社会信用代码在enterprise表中不存在的情况，从而丢失这部分数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="270" y="1062" width="639" height="40" as="geometry" />
+        <mxCell id="dErfdyEedOs2bl96Plfb-31" value="基于和离线任务同样的原因，需要根据enterprise表得到市场主体类型，而enterprise表只会在对应的连线任务中更新，所以实时任务运行时有可能存在在执照中得到的统一社会信用代码在enterprise表中不存在的情况，从而丢失这部分数据" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="270" y="1065" width="639" height="40" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-33" value="需要从Hive中的licenses拿到执照类型，所以需要license_inserthive先于本任务执行" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="299.5" y="730" width="269" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="dErfdyEedOs2bl96Plfb-34" value="从business_licence_employ里得到昨日及迄今为止所有的使用量&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;所有数据的计算均基于Hive，这样在初始化和后续的周期任务可以调用相同的脚本&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1050" y="660" width="440" height="40" as="geometry" />
+        <mxCell id="dErfdyEedOs2bl96Plfb-34" value="从business_licence_employ里得到昨日及迄今为止所有的使用量" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="850" y="645" width="440" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dErfdyEedOs2bl96Plfb-35" value="从business_licence_employ里得到按照应用统计的使用量（全量覆盖原有数据）" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="660" y="752.5" width="184" height="55" as="geometry" />
@@ -1189,6 +1189,9 @@
           <mxGeometry x="-0.3933" y="-2" relative="1" as="geometry">
             <mxPoint x="5" y="-14" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="W-Rs6rZ8YNUCY15_twSq-2" value="说明：&lt;br&gt;- 离线任务的计算完全基于Hive里的数据，而不会使用MySQL中历史的统计数据，这样在初始化和后续的周期任务可以调用相同的脚本&lt;br&gt;- 实时任务会基于MySQL中的历史统计来加速计算过程" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontColor=#FF0000;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1560" width="440" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
