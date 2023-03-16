@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T03:07:40.207Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69" etag="SXyrgYh51v-lzJKxakZx" version="21.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-13T08:59:58.838Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69" etag="ipJ6-z9bZ_WteLmNKJda" version="21.0.6" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1426,6 +1426,9 @@
         </mxCell>
         <mxCell id="SFTMWB1oWjO4-KO1POfa-18" value="&lt;div&gt;&amp;nbsp; @transient private[sql] val logicalPlan: LogicalPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // For various commands (like DDL) and queries with side effects, we force query execution&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // to happen right away to let these side effects take place eagerly.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; queryExecution.analyzed match {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case c: Command =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LocalRelation(c.output, withAction(&quot;command&quot;, queryExecution)(_.executeCollect()))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case u @ Union(children) if children.forall(_.isInstanceOf[Command]) =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LocalRelation(u.output, withAction(&quot;command&quot;, queryExecution)(_.executeCollect()))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case _ =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; queryExecution.analyzed&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="760" y="465" width="560" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-19" value="主要类：&lt;br&gt;-&amp;nbsp;org.apache.spark.sql.functions&lt;br&gt;&amp;nbsp; sql用到的系统函数" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1419" y="130" width="480" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
