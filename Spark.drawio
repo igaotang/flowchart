@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-28T08:49:44.155Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51" etag="dw9tXxR6mOpacY8ZS475" version="21.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-28T08:52:38.237Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51" etag="XSjCTWQvnizcmc9FgeTs" version="21.0.6" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="848" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -104,8 +104,8 @@
         <mxCell id="THCTk6hH6egYFEfsFXks-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0000;fontSize=14;curved=1;dashed=1;dashPattern=12 12;" parent="1" source="THCTk6hH6egYFEfsFXks-33" target="THCTk6hH6egYFEfsFXks-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="THCTk6hH6egYFEfsFXks-33" value="程序在初始化Analysis类的时候，会初始化一些规则，然后根据这些规则来匹配执行计划，进行逻辑解析和优化&lt;br&gt;针对Hive的Rule有：&lt;br&gt;HiveAnalysis、DataSourceAnalysis" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="285" y="1010" width="255" height="80" as="geometry" />
+        <mxCell id="THCTk6hH6egYFEfsFXks-33" value="程序在初始化Analysis类的时候，会初始化一些规则，然后根据这些规则来匹配执行计划，进行逻辑解析和优化&lt;br&gt;常见的Rule有：&lt;br&gt;DeremineTableStats&lt;br&gt;RelationConversions&lt;br&gt;PreprocessTableCreation&lt;br&gt;PreprocessTableInsertion&lt;br&gt;DataSourceAnalysis&lt;br&gt;HiveAnalysis&lt;br&gt;其中DataSourceAnalysis和HiveAnalysis会对Hive做相应的处理" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="279.21" y="985" width="405" height="180" as="geometry" />
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-36" value="DataSet" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="95" y="1180" width="115" height="40" as="geometry" />
