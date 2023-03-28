@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-13T08:59:58.838Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69" etag="ipJ6-z9bZ_WteLmNKJda" version="21.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-28T08:34:07.909Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51" etag="6cHA_-snDkLtAE2uZvju" version="21.0.6" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
-    <mxGraphModel dx="1562" dy="903" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1364,71 +1364,136 @@
         <mxCell id="99DLMoNuBYmvFpYEHvyQ-48" value="&lt;div&gt;无论是直接使用 SQL 语句还是使用 DataFrame，都会经过如下步骤转换成 DAG 对 RDD 的操作：&lt;/div&gt;&lt;div&gt;- Parser 解析 SQL，生成 Unresolved Logical Plan，得到投影select、连接join、过滤where等基本内容&lt;/div&gt;&lt;div&gt;- 由 Analyzer 结合 Catalog 信息生成 Resolved Logical Plan，在上一步的基础上加上数据类型、表结构（schema）等信息&lt;/div&gt;&lt;div&gt;- Optimizer根据预先定义好的规则对 Resolved Logical Plan 进行优化并生成 Optimized Logical Plan，常见优化如谓词下推、常量折叠、列裁剪等&lt;/div&gt;&lt;div&gt;- Query Planner 将 Optimized Logical Plan 转换成多个 Physical Plan&lt;/div&gt;&lt;div&gt;- CBO 根据 Cost Model 算出每个 Physical Plan 的代价并选取代价最小的 Physical Plan 作为最终的 Physical Plan&lt;/div&gt;&lt;div&gt;- Spark 以 DAG 的方法执行上述 Physical Plan&lt;/div&gt;&lt;div&gt;- 在执行 DAG 的过程中，Adaptive Execution 根据运行时信息动态调整执行计划从而提高执行效率&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;join：broadcast join、hash join、shuffle join&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;聚合Aggregate：基于排序的聚合，基于hash的聚合，预聚合&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;opacity=0;align=left;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1365.25" y="555" width="467.5" height="305" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-1" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-24" target="THCTk6hH6egYFEfsFXks-17">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-1" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" parent="1" source="THCTk6hH6egYFEfsFXks-24" target="THCTk6hH6egYFEfsFXks-17" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="390" y="737.5" as="sourcePoint" />
             <mxPoint x="310" y="802.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SFTMWB1oWjO4-KO1POfa-2" target="SFTMWB1oWjO4-KO1POfa-4">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="SFTMWB1oWjO4-KO1POfa-2" target="SFTMWB1oWjO4-KO1POfa-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-2" value="DataSet#ofRow" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-2" value="DataSet#ofRow" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="576.75" y="555" width="118.49" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-4" target="SFTMWB1oWjO4-KO1POfa-2">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=14;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" parent="1" source="THCTk6hH6egYFEfsFXks-4" target="SFTMWB1oWjO4-KO1POfa-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="466" y="642.5" as="sourcePoint" />
             <mxPoint x="400" y="667.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SFTMWB1oWjO4-KO1POfa-4" target="SFTMWB1oWjO4-KO1POfa-7">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="SFTMWB1oWjO4-KO1POfa-4" target="SFTMWB1oWjO4-KO1POfa-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-4" value="调用DataSet的构造函数&lt;br&gt;触发其logicalPlan属性的初始化" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-4" value="调用DataSet的构造函数&lt;br&gt;触发其logicalPlan属性的初始化" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="531" y="610" width="223.25" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SFTMWB1oWjO4-KO1POfa-7" target="SFTMWB1oWjO4-KO1POfa-9">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="SFTMWB1oWjO4-KO1POfa-7" target="SFTMWB1oWjO4-KO1POfa-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-11" value="Command" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SFTMWB1oWjO4-KO1POfa-10">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-11" value="Command" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="SFTMWB1oWjO4-KO1POfa-10" vertex="1" connectable="0">
           <mxGeometry x="0.0748" y="-1" relative="1" as="geometry">
             <mxPoint y="15" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SFTMWB1oWjO4-KO1POfa-7" target="SFTMWB1oWjO4-KO1POfa-12">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="SFTMWB1oWjO4-KO1POfa-7" target="SFTMWB1oWjO4-KO1POfa-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-14" value="Union" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SFTMWB1oWjO4-KO1POfa-13">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-14" value="Union" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="SFTMWB1oWjO4-KO1POfa-13" vertex="1" connectable="0">
           <mxGeometry x="-0.7743" relative="1" as="geometry">
             <mxPoint y="8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SFTMWB1oWjO4-KO1POfa-7" target="SFTMWB1oWjO4-KO1POfa-15">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="SFTMWB1oWjO4-KO1POfa-7" target="SFTMWB1oWjO4-KO1POfa-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-17" value="其他，简单的select" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="SFTMWB1oWjO4-KO1POfa-16">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-17" value="其他，简单的select" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="SFTMWB1oWjO4-KO1POfa-16" vertex="1" connectable="0">
           <mxGeometry x="0.417" relative="1" as="geometry">
             <mxPoint y="12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-7" value="返回值" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-7" value="返回值" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="600.24" y="675" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-9" value="立即执行命令&lt;br style=&quot;font-size: 10px;&quot;&gt;如insert、drop等" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-9" value="立即执行命令&lt;br style=&quot;font-size: 10px;&quot;&gt;如insert、drop等" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="500.24" y="750" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-12" value="立即执行命令&lt;br&gt;带有union查询" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-12" value="立即执行命令&lt;br&gt;带有union查询" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="606.25" y="750" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-15" value="返回QueryExecution#analyzed" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-15" value="返回QueryExecution#analyzed" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="701.69" y="750" width="168.31" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-18" value="&lt;div&gt;&amp;nbsp; @transient private[sql] val logicalPlan: LogicalPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // For various commands (like DDL) and queries with side effects, we force query execution&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // to happen right away to let these side effects take place eagerly.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; queryExecution.analyzed match {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case c: Command =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LocalRelation(c.output, withAction(&quot;command&quot;, queryExecution)(_.executeCollect()))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case u @ Union(children) if children.forall(_.isInstanceOf[Command]) =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LocalRelation(u.output, withAction(&quot;command&quot;, queryExecution)(_.executeCollect()))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case _ =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; queryExecution.analyzed&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-18" value="&lt;div&gt;&amp;nbsp; @transient private[sql] val logicalPlan: LogicalPlan = {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // For various commands (like DDL) and queries with side effects, we force query execution&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; // to happen right away to let these side effects take place eagerly.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; queryExecution.analyzed match {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case c: Command =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LocalRelation(c.output, withAction(&quot;command&quot;, queryExecution)(_.executeCollect()))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case u @ Union(children) if children.forall(_.isInstanceOf[Command]) =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LocalRelation(u.output, withAction(&quot;command&quot;, queryExecution)(_.executeCollect()))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; case _ =&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; queryExecution.analyzed&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="760" y="465" width="560" height="205" as="geometry" />
         </mxCell>
-        <mxCell id="SFTMWB1oWjO4-KO1POfa-19" value="主要类：&lt;br&gt;-&amp;nbsp;org.apache.spark.sql.functions&lt;br&gt;&amp;nbsp; sql用到的系统函数" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="SFTMWB1oWjO4-KO1POfa-19" value="主要类：&lt;br&gt;-&amp;nbsp;org.apache.spark.sql.functions&lt;br&gt;&amp;nbsp; sql用到的系统函数" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1419" y="130" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-1" target="TFBhz6nrz6A0_3sj8iNr-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-1" value="InsertIntoTable Command" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="755" width="190" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-3" target="TFBhz6nrz6A0_3sj8iNr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-10" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-9">
+          <mxGeometry x="0.3195" y="-1" relative="1" as="geometry">
+            <mxPoint x="45" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-3" target="TFBhz6nrz6A0_3sj8iNr-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-14" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-13">
+          <mxGeometry x="0.3046" y="2" relative="1" as="geometry">
+            <mxPoint x="-52" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-3" value="是否为Hive表" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="840" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-8" value="非Hive逻辑&lt;br&gt;（暂时缺失）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="944.75" y="910" width="100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-12" target="TFBhz6nrz6A0_3sj8iNr-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-18" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-17">
+          <mxGeometry x="-0.1595" y="-3" relative="1" as="geometry">
+            <mxPoint x="21" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-12" target="TFBhz6nrz6A0_3sj8iNr-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-21" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-20">
+          <mxGeometry x="0.0952" y="-2" relative="1" as="geometry">
+            <mxPoint x="-75" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-12" value="判断是否为ORC或Parquet表" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-16" target="TFBhz6nrz6A0_3sj8iNr-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-16" value="保持HiveTableRelation不变" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1044.75" y="1045" width="158.5" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-19" target="TFBhz6nrz6A0_3sj8iNr-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-19" value="调用RelationConversions#convert将原来的relation转变为HadoopFsRelation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1263.5" y="1042.5" width="266.5" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-22" value="LogicalPlan变为InsertIntoHadoopFsRelationCommand" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1263.5" y="1145" width="266.5" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="TFBhz6nrz6A0_3sj8iNr-24" value="LogicalPlan为InsertIntoHiveTable" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1044.75" y="1135" width="158.5" height="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
