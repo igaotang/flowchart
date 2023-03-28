@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-28T08:34:07.909Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51" etag="6cHA_-snDkLtAE2uZvju" version="21.0.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-28T08:48:11.622Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.51" etag="wAqSJ5p_FYiSAUOOMXSo" version="21.0.6" type="github" pages="2">
   <diagram name="Spark  SQL执行流程" id="dEqnPz7Te2CZXSZK34e1">
     <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -104,8 +104,8 @@
         <mxCell id="THCTk6hH6egYFEfsFXks-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0000;fontSize=14;curved=1;dashed=1;dashPattern=12 12;" parent="1" source="THCTk6hH6egYFEfsFXks-33" target="THCTk6hH6egYFEfsFXks-31" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="THCTk6hH6egYFEfsFXks-33" value="程序在初始化Analysis类的时候，会初始化一些规则，然后根据这些规则来匹配执行计划，进行逻辑解析和优化" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="285" y="1010" width="209" height="80" as="geometry" />
+        <mxCell id="THCTk6hH6egYFEfsFXks-33" value="程序在初始化Analysis类的时候，会初始化一些规则，然后根据这些规则来匹配执行计划，进行逻辑解析和优化&lt;br&gt;针对Hive的Rule有：&lt;br&gt;HiveAnalysis、DataSourceAnalysis" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="285" y="1010" width="255" height="80" as="geometry" />
         </mxCell>
         <mxCell id="THCTk6hH6egYFEfsFXks-36" value="DataSet" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="95" y="1180" width="115" height="40" as="geometry" />
@@ -131,7 +131,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xvGSpYOVI_oOir4ocMuj-5" value="使用基于Rule的规则解析以及Session Catalog来实现函数资源信息和元数据管理信息。&lt;br&gt;使用事先定义好的 Rule 以及 Catalog 等信息对 Unresolved LogicalPlan 进行 transform。&lt;br&gt;Catalog 主要用于各种函数资源信息和元数据信息（数据库、数据表、数据视图、数据分区与函数等）的统一管理。&lt;br&gt;&lt;div&gt;多个性质类似的 Rule 组成一个 Batch，比如上面名为 Hints 的 Batch就是由很多个 Hints Rule 组成；而多个 Batch 构成一个 batches。这些 batches 会由 RuleExecutor 执行，先按一个一个 Batch 顺序执行，然后对 Batch 里面的每个 Rule 顺序执行。每个 Batch 会执行一次（Once）或多次（FixedPoint，由&lt;/div&gt;&lt;div&gt;spark.sql.optimizer.maxIterations 参数决定）&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=14;rounded=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="330" y="790" width="560" height="150" as="geometry" />
+          <mxGeometry x="316.31" y="820" width="560" height="150" as="geometry" />
         </mxCell>
         <mxCell id="dJa-XMbD3ppQLrqUtmth-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dJa-XMbD3ppQLrqUtmth-1" target="dJa-XMbD3ppQLrqUtmth-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -1415,6 +1415,16 @@
         <mxCell id="SFTMWB1oWjO4-KO1POfa-7" value="返回值" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="600.24" y="675" width="80" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="tSvkxk5Mdt9zvjTfPrY6-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="SFTMWB1oWjO4-KO1POfa-9" target="TFBhz6nrz6A0_3sj8iNr-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="800" />
+              <mxPoint x="890" y="800" />
+              <mxPoint x="890" y="735" />
+              <mxPoint x="1100" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="SFTMWB1oWjO4-KO1POfa-9" value="立即执行命令&lt;br style=&quot;font-size: 10px;&quot;&gt;如insert、drop等" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="500.24" y="750" width="100" height="30" as="geometry" />
         </mxCell>
@@ -1434,7 +1444,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-1" value="InsertIntoTable Command" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1005" y="755" width="190" height="35" as="geometry" />
+          <mxGeometry x="1008.25" y="820" width="190" height="35" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-3" target="TFBhz6nrz6A0_3sj8iNr-8">
           <mxGeometry relative="1" as="geometry" />
@@ -1453,17 +1463,17 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-3" value="是否为Hive表" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="840" width="80" height="40" as="geometry" />
+          <mxGeometry x="1063.25" y="905" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-8" value="非Hive逻辑&lt;br&gt;（暂时缺失）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="944.75" y="910" width="100" height="35" as="geometry" />
+          <mxGeometry x="948" y="975" width="100" height="35" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-12" target="TFBhz6nrz6A0_3sj8iNr-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-18" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-17">
           <mxGeometry x="-0.1595" y="-3" relative="1" as="geometry">
-            <mxPoint x="21" y="-13" as="offset" />
+            <mxPoint x="16" y="3" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-12" target="TFBhz6nrz6A0_3sj8iNr-19">
@@ -1475,31 +1485,49 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-12" value="判断是否为ORC或Parquet表" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1170" y="920" width="120" height="60" as="geometry" />
+          <mxGeometry x="1173.25" y="985" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-16" target="TFBhz6nrz6A0_3sj8iNr-24">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="tSvkxk5Mdt9zvjTfPrY6-1" value="HiveAnalysis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-25">
+          <mxGeometry x="0.24" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-16" value="保持HiveTableRelation不变" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1044.75" y="1045" width="158.5" height="45" as="geometry" />
+          <mxGeometry x="1049.25" y="1075" width="158.5" height="45" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TFBhz6nrz6A0_3sj8iNr-19" target="TFBhz6nrz6A0_3sj8iNr-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="tSvkxk5Mdt9zvjTfPrY6-2" value="DataSourceAnalysis" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TFBhz6nrz6A0_3sj8iNr-23">
+          <mxGeometry x="-0.2756" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-19" value="调用RelationConversions#convert将原来的relation转变为HadoopFsRelation" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1263.5" y="1042.5" width="266.5" height="35" as="geometry" />
+          <mxGeometry x="1266.75" y="1085" width="266.5" height="35" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-22" value="LogicalPlan变为InsertIntoHadoopFsRelationCommand" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1263.5" y="1145" width="266.5" height="35" as="geometry" />
+          <mxGeometry x="1266.75" y="1210" width="266.5" height="35" as="geometry" />
         </mxCell>
         <mxCell id="TFBhz6nrz6A0_3sj8iNr-24" value="LogicalPlan为InsertIntoHiveTable" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1044.75" y="1135" width="158.5" height="45" as="geometry" />
+          <mxGeometry x="1049.25" y="1200" width="158.5" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tSvkxk5Mdt9zvjTfPrY6-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;dashed=1;dashPattern=12 12;strokeColor=#FF0000;" edge="1" parent="1" source="THCTk6hH6egYFEfsFXks-33" target="TFBhz6nrz6A0_3sj8iNr-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="1050" />
+              <mxPoint x="910" y="773" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="paH7I8qUg0bJJ3d27nVu" name="SparkSession启动">
-    <mxGraphModel dx="1802" dy="-300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1562" dy="-300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
