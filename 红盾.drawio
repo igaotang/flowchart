@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-19T02:43:54.308Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48" etag="zf8i71QpAbFEG_KbPPzU" version="21.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-19T02:49:31.573Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48" etag="E_mlYkB70P34Cren8Sd7" version="21.1.9" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1302,11 +1302,11 @@
         <mxCell id="zGOONAWdeFodaRB1oWJT-53" value="截止到昨日的数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry y="3750" width="117" height="27" as="geometry" />
         </mxCell>
-        <mxCell id="0XW1Izp4kfUsqAjmYLaX-1" value="Hive市场主体库&lt;br&gt;（截止昨日的数据）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-1" value="市场主体库&lt;br&gt;（截止昨日的数据）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="-62" y="4040" width="172" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-2" value="执照库&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;（截止昨日的数据）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="-60" y="4150" width="174" height="40" as="geometry" />
+          <mxGeometry x="-57" y="4160" width="174" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-3" value="执照使用库&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;（截止昨日的数据）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="-62" y="4290" width="172" height="40" as="geometry" />
@@ -1317,8 +1317,20 @@
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-4" target="0XW1Izp4kfUsqAjmYLaX-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0XW1Izp4kfUsqAjmYLaX-4" value="实时任务" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-4" target="0XW1Izp4kfUsqAjmYLaX-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-4" value="离线任务" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="-261" y="4160" width="82" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-8" value="Hive里存储的是截止离线任务运行时刻各个业务日志所产生的数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="182" y="4160" width="235" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-9" value="昨日的数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="466.5" y="4080" width="172" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-10" value="任务运行当天0点至任务运行时刻的当日部分数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="466.5" y="4200" width="172" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
