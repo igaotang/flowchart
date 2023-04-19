@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-19T03:15:21.636Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48" etag="4_bCrtGxX-Gm-8xmtKAZ" version="21.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-19T03:16:05.167Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48" etag="_j-re4ZeTQ8UU3POGTQX" version="21.1.9" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1355,7 +1355,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0XW1Izp4kfUsqAjmYLaX-20" value="type&lt;br&gt;市场主体类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0XW1Izp4kfUsqAjmYLaX-19">
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-20" value="type&lt;br&gt;市场主体类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="0XW1Izp4kfUsqAjmYLaX-19">
           <mxGeometry x="0.3462" y="3" relative="1" as="geometry">
             <mxPoint x="-4" y="-29" as="offset" />
           </mxGeometry>
@@ -1363,7 +1363,7 @@
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-16" value="市场主体库&lt;br&gt;（截止昨日的数据）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="182" y="3830" width="172" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="0XW1Izp4kfUsqAjmYLaX-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-17" target="0XW1Izp4kfUsqAjmYLaX-18">
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;strokeColor=#FF0000;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-17" target="0XW1Izp4kfUsqAjmYLaX-18">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="410" y="3980" />
@@ -1371,7 +1371,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0XW1Izp4kfUsqAjmYLaX-22" value="licence_type&lt;br&gt;执照类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="0XW1Izp4kfUsqAjmYLaX-21">
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-22" value="licence_type&lt;br&gt;执照类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="0XW1Izp4kfUsqAjmYLaX-21">
           <mxGeometry x="-0.2359" y="3" relative="1" as="geometry">
             <mxPoint x="-3" y="13" as="offset" />
           </mxGeometry>
@@ -1381,6 +1381,21 @@
         </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-18" value="执照使用库&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;（截止昨日的数据）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="182" y="4080" width="172" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;curved=1;strokeColor=#FF0000;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="354" y="3850" as="sourcePoint" />
+            <mxPoint x="361" y="3960" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="420" y="3850" />
+              <mxPoint x="420" y="3960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-24" value="type&lt;br&gt;市场主体类型" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FF0000;" vertex="1" connectable="0" parent="0XW1Izp4kfUsqAjmYLaX-23">
+          <mxGeometry x="0.3462" y="3" relative="1" as="geometry">
+            <mxPoint x="-4" y="-29" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
