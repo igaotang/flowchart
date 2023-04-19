@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-19T02:51:16.800Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48" etag="FHmsJs2ExR1Ss62lNDBq" version="21.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-19T02:52:30.413Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48" etag="hmj5jAL7YvJiQBR2eio1" version="21.1.9" type="github">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1323,14 +1323,20 @@
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-4" value="离线任务" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="-336.5" y="3920" width="82" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-8" target="0XW1Izp4kfUsqAjmYLaX-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0XW1Izp4kfUsqAjmYLaX-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-8" target="0XW1Izp4kfUsqAjmYLaX-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-8" value="Hive库" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="165" y="4160" width="235" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-9" value="昨日数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="466.5" y="4080" width="172" height="40" as="geometry" />
+          <mxGeometry x="466.5" y="4092" width="172" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-10" value="今日数据&lt;br&gt;任务运行当天0点至任务运行时刻的当日部分数据" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="466.5" y="4190" width="172" height="60" as="geometry" />
+          <mxGeometry x="466.5" y="4220" width="172" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0XW1Izp4kfUsqAjmYLaX-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0XW1Izp4kfUsqAjmYLaX-11" target="0XW1Izp4kfUsqAjmYLaX-8">
           <mxGeometry relative="1" as="geometry" />
