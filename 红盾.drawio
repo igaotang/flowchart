@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-11T02:02:34.450Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58" etag="NsYeEfs3Av--gOgAIH7K" version="21.2.9" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-05-11T02:04:54.027Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58" etag="MhHzygwX-nh2-dy_6znI" version="21.2.9" type="github" pages="3">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1723,46 +1723,46 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-89" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="120" y="1270" width="90" height="40" as="geometry" />
+          <mxGeometry x="125" y="1360" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-91" target="8EQMTNwU_sQ675FEuQxO-93">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-91" value="合并日志文件到单一文件中" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="105" y="1340" width="120" height="40" as="geometry" />
+          <mxGeometry x="110" y="1430" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-92" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-93" target="8EQMTNwU_sQ675FEuQxO-95">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-93" value="按照&quot;&amp;nbsp; -&amp;nbsp; &quot; 切分日志内容，生成实名信息" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="105" y="1410" width="120" height="50" as="geometry" />
+          <mxGeometry x="110" y="1500" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-95" target="8EQMTNwU_sQ675FEuQxO-97">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-95" value="过滤掉hash_id为空的数据" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="105" y="1490" width="120" height="50" as="geometry" />
+          <mxGeometry x="110" y="1580" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-97" target="8EQMTNwU_sQ675FEuQxO-98">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-97" value="插入Hive表real_name" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="105" y="1570" width="120" height="50" as="geometry" />
+          <mxGeometry x="110" y="1660" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-98" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="117.5" y="1660" width="95" height="50" as="geometry" />
+          <mxGeometry x="122.5" y="1750" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-100" target="8EQMTNwU_sQ675FEuQxO-102">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-100" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="455" y="1260" width="90" height="40" as="geometry" />
+          <mxGeometry x="607.5" y="1360" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-102" target="8EQMTNwU_sQ675FEuQxO-105">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-102" value="合并日志文件到单一文件中" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="440" y="1330" width="120" height="40" as="geometry" />
+          <mxGeometry x="592.5" y="1430" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-105" target="8EQMTNwU_sQ675FEuQxO-112">
           <mxGeometry relative="1" as="geometry" />
@@ -1771,33 +1771,33 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-105" value="读取日志内容生成执照信息，过滤掉统一社会信用代码为空的数据，创建临时表T1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="440" y="1400" width="120" height="60" as="geometry" />
+          <mxGeometry x="592.5" y="1500" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-107" target="8EQMTNwU_sQ675FEuQxO-109">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-107" value="插入拉链表ZIPPER_LICENSE" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="557.5" y="1540" width="120" height="50" as="geometry" />
+          <mxGeometry x="710" y="1640" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-109" target="8EQMTNwU_sQ675FEuQxO-110">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-109" value="从拉链中选取每个执照最新的一条记录插入执照表licmgr.LICENSE" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="542.5" y="1630" width="150" height="70" as="geometry" />
+          <mxGeometry x="695" y="1730" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-110" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="467.5" y="1779" width="95" height="50" as="geometry" />
+          <mxGeometry x="620" y="1879" width="95" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-112" target="8EQMTNwU_sQ675FEuQxO-110">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="367.5" y="1740" />
-              <mxPoint x="515.5" y="1740" />
+              <mxPoint x="520" y="1840" />
+              <mxPoint x="668" y="1840" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-112" value="插入Hive执照管理表mgr_log" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="307.5" y="1540" width="120" height="50" as="geometry" />
+          <mxGeometry x="460" y="1640" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-115" target="8EQMTNwU_sQ675FEuQxO-121">
           <mxGeometry relative="1" as="geometry" />
@@ -2061,10 +2061,10 @@
           <mxGeometry x="1790" y="14.5" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="UIsgIOe5XecxOtX4Tjdq-4" value="实名信息" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#FF0000;fontSize=17;" vertex="1" parent="1">
-          <mxGeometry x="15" y="1270.5" width="80" height="39" as="geometry" />
+          <mxGeometry x="20" y="1360.5" width="80" height="39" as="geometry" />
         </mxCell>
         <mxCell id="UIsgIOe5XecxOtX4Tjdq-5" value="执照管理" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#FF0000;fontSize=17;" vertex="1" parent="1">
-          <mxGeometry x="360" y="1261" width="80" height="39" as="geometry" />
+          <mxGeometry x="512.5" y="1361" width="80" height="39" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
