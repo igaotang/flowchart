@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-11T01:55:36.107Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58" etag="m81BalL-1mqJ_sZxo0N4" version="21.2.9" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-05-11T02:00:33.009Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58" etag="P2m7OQ_mAmgU08jiOtrW" version="21.2.9" type="github" pages="3">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2629" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1806,7 +1806,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-115" value="清空MySQL表licence_recevie_y" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1030" y="660" width="135" height="50" as="geometry" />
+          <mxGeometry x="1030" y="648" width="135" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-119" target="8EQMTNwU_sQ675FEuQxO-143">
           <mxGeometry relative="1" as="geometry" />
@@ -1817,13 +1817,13 @@
         <mxCell id="8EQMTNwU_sQ675FEuQxO-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-119" target="8EQMTNwU_sQ675FEuQxO-153">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8EQMTNwU_sQ675FEuQxO-119" value="根据执照统一社会信用代码取得一条执照数据，得到全量的下载过执照的市场主体数据L2" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="8EQMTNwU_sQ675FEuQxO-119" value="根据执照统一社会信用代码取得去重后的执照数据，作为全量的下载过执照的市场主体数据L2" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="1287" y="760" width="135" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-121" target="8EQMTNwU_sQ675FEuQxO-141">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8EQMTNwU_sQ675FEuQxO-121" value="根据执照序列号得到执照的唯一条数据，作为全量的执照数据L1" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="8EQMTNwU_sQ675FEuQxO-121" value="根据执照序列号得到执照去重后的数据，作为全量的执照数据L1" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="930" y="760" width="135" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-123" target="8EQMTNwU_sQ675FEuQxO-115">
@@ -1893,13 +1893,13 @@
         <mxCell id="8EQMTNwU_sQ675FEuQxO-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-141" target="8EQMTNwU_sQ675FEuQxO-125">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8EQMTNwU_sQ675FEuQxO-141" value="按照&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%E6%A0%B9%E6%8D%AE%E6%89%A7%E7%85%A7%E5%BA%8F%E5%88%97%E5%8F%B7%E5%88%86%E7%BB%84%EF%BC%8C%E5%BE%97%E5%88%B0%E5%85%A8%E9%87%8F%E7%9A%84%E6%89%A7%E7%85%A7%E6%95%B0%E6%8D%AEL1%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23ffffff%3BstrokeColor%3D%23000000%3BfontColor%3D%23000000%3Brounded%3D1%3BarcSize%3D14%3BstrokeWidth%3D2%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22930%22%20y%3D%22760%22%20width%3D%22135%22%20height%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphMod&lt;/span&gt;地区、执照类型分组进行统计" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="8EQMTNwU_sQ675FEuQxO-141" value="按照&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%E6%A0%B9%E6%8D%AE%E6%89%A7%E7%85%A7%E5%BA%8F%E5%88%97%E5%8F%B7%E5%88%86%E7%BB%84%EF%BC%8C%E5%BE%97%E5%88%B0%E5%85%A8%E9%87%8F%E7%9A%84%E6%89%A7%E7%85%A7%E6%95%B0%E6%8D%AEL1%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23ffffff%3BstrokeColor%3D%23000000%3BfontColor%3D%23000000%3Brounded%3D1%3BarcSize%3D14%3BstrokeWidth%3D2%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22930%22%20y%3D%22760%22%20width%3D%22135%22%20height%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphMod&lt;/span&gt;地区、执照类型分组进行统计以下数据" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="930" y="839" width="135" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-143" target="8EQMTNwU_sQ675FEuQxO-133">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8EQMTNwU_sQ675FEuQxO-143" value="按照&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%E6%A0%B9%E6%8D%AE%E6%89%A7%E7%85%A7%E5%BA%8F%E5%88%97%E5%8F%B7%E5%88%86%E7%BB%84%EF%BC%8C%E5%BE%97%E5%88%B0%E5%85%A8%E9%87%8F%E7%9A%84%E6%89%A7%E7%85%A7%E6%95%B0%E6%8D%AEL1%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23ffffff%3BstrokeColor%3D%23000000%3BfontColor%3D%23000000%3Brounded%3D1%3BarcSize%3D14%3BstrokeWidth%3D2%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22930%22%20y%3D%22760%22%20width%3D%22135%22%20height%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphMod&lt;/span&gt;地区、执照类型分组进行统计" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="8EQMTNwU_sQ675FEuQxO-143" value="按照&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%E6%A0%B9%E6%8D%AE%E6%89%A7%E7%85%A7%E5%BA%8F%E5%88%97%E5%8F%B7%E5%88%86%E7%BB%84%EF%BC%8C%E5%BE%97%E5%88%B0%E5%85%A8%E9%87%8F%E7%9A%84%E6%89%A7%E7%85%A7%E6%95%B0%E6%8D%AEL1%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23ffffff%3BstrokeColor%3D%23000000%3BfontColor%3D%23000000%3Brounded%3D1%3BarcSize%3D14%3BstrokeWidth%3D2%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22930%22%20y%3D%22760%22%20width%3D%22135%22%20height%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphMod&lt;/span&gt;地区、执照类型分组进行统计以下数据" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;rounded=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="1122" y="860" width="135" height="50" as="geometry" />
         </mxCell>
         <mxCell id="8EQMTNwU_sQ675FEuQxO-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8EQMTNwU_sQ675FEuQxO-145" target="8EQMTNwU_sQ675FEuQxO-147">
