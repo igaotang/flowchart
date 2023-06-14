@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-14T02:10:08.851Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="3LJFsNfiw7uN_ng2_aIr" version="21.2.9" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-06-14T02:10:33.160Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="6hrn2wt1ssAkW5UVprc6" version="21.2.9" type="github" pages="4">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2406,6 +2406,14 @@
         <mxCell id="CQcdjOqP_y81M2a94iuG-28" value="全量执照信息" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;" parent="kcNXVjqvIGBMTmM9OVR7-1" vertex="1">
           <mxGeometry x="1290" y="233" width="120" height="40" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Y2m-r75ibcdiWNGQc2ZS" name="电子招投标">
+    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
