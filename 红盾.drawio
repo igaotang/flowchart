@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-14T02:29:55.642Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="jjh0fJq_M2Ql_0Xadp5S" version="21.2.9" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-06-14T02:33:47.973Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="AAahkKLSWXAJoDecdi5s" version="21.2.9" type="github" pages="4">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2514,6 +2514,21 @@
         </mxCell>
         <mxCell id="aXzs8Yh24sB93xMLFL81-19" value="新建执照人" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="210" y="480" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aXzs8Yh24sB93xMLFL81-26" value="查询密钥备份（C.1）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="440" y="70" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aXzs8Yh24sB93xMLFL81-27" value="备份密钥（接口C.2）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="760" y="70" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aXzs8Yh24sB93xMLFL81-28" value="恢复密钥（接口C.3）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="70" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aXzs8Yh24sB93xMLFL81-29" value="删除密钥（接口C.4）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="70" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="aXzs8Yh24sB93xMLFL81-30" value="unisrv服务" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
+          <mxGeometry y="880" width="160" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
