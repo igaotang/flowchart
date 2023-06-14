@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-14T06:29:10.477Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="QQB6DQOneLQxFe16UXz-" version="21.2.9" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-06-14T06:29:30.019Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="ATtQgQhi7w6cbB6Jk5rm" version="21.2.9" type="github" pages="4">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2530,7 +2530,7 @@
         <mxCell id="aXzs8Yh24sB93xMLFL81-30" value="unisrv服务" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
           <mxGeometry y="930" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="aXzs8Yh24sB93xMLFL81-31" value="签名密钥解密：I3-E.1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
+        <mxCell id="aXzs8Yh24sB93xMLFL81-31" value="签名密钥解密：I3-E.1&lt;br&gt;利用服务端私钥解密T1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
           <mxGeometry y="1000" width="250" height="40" as="geometry" />
         </mxCell>
         <mxCell id="aXzs8Yh24sB93xMLFL81-32" value="生成加密密钥：I3-E.2" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
@@ -2538,9 +2538,6 @@
         </mxCell>
         <mxCell id="aXzs8Yh24sB93xMLFL81-33" value="加密密钥解密：I3:E.3" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
           <mxGeometry x="600" y="1000" width="250" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="aXzs8Yh24sB93xMLFL81-35" value="利用服务端私钥解密T1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" vertex="1" parent="1">
-          <mxGeometry x="10" y="1050" width="250" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
