@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T06:20:57.195Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="uRyT5X_QjDkxTjN2bPF7" version="21.2.9" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-06-15T06:22:05.089Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="ghR0lx9-NgMYIuKrBHLX" version="21.2.9" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2678,12 +2678,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-83" value="调用密码机对服务端私钥加密" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="562.5" y="1560" width="90" height="30" as="geometry" />
+          <mxGeometry x="562.5" y="1570" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="txJrApA3H6D6tEuTt8AX-89" target="txJrApA3H6D6tEuTt8AX-77">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-89" value="返回持照人ID" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="txJrApA3H6D6tEuTt8AX-89" value="返回ID、完整公钥至客户端" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="562.5" y="1832" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-96" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="txJrApA3H6D6tEuTt8AX-92" target="txJrApA3H6D6tEuTt8AX-95">
@@ -2708,10 +2708,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-101" value="对完整公钥做SM2杂凑生成秘钥表ID" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="541.25" y="1630" width="132.5" height="30" as="geometry" />
+          <mxGeometry x="541.25" y="1650" width="132.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="txJrApA3H6D6tEuTt8AX-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="txJrApA3H6D6tEuTt8AX-103" target="txJrApA3H6D6tEuTt8AX-89">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-103" value="将ID、加密过的服务端私钥、完整公钥、硬件信息存入SOFTWARE_ENCRYPTKEY_INFO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="486.25" y="1700" width="242.5" height="40" as="geometry" />
+          <mxGeometry x="486.25" y="1734" width="242.5" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
