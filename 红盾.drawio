@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T02:10:30.753Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="Hm9nmtqMzeOrO5fVIrcW" version="21.2.9" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-06-15T02:13:48.386Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="2TWrBw0jUDOUUQ1DS8mU" version="21.2.9" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2410,7 +2410,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Y2m-r75ibcdiWNGQc2ZS" name="电子招投标">
-    <mxGraphModel dx="1562" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1194" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2538,6 +2538,12 @@
         </mxCell>
         <mxCell id="aXzs8Yh24sB93xMLFL81-33" value="加密密钥解密：I3:E.3" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" parent="1" vertex="1">
           <mxGeometry x="600" y="1000" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="txJrApA3H6D6tEuTt8AX-1" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="txJrApA3H6D6tEuTt8AX-2" value="根据一下信息查询TBL_HOLDER_INFO表：&lt;br&gt;- 统一社会信用代码&lt;br&gt;- appID&lt;br&gt;- openID&lt;br&gt;- role&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" vertex="1" parent="1">
+          <mxGeometry x="108.75" y="290" width="160" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
