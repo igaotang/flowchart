@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T02:23:15.204Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="Q86d-IIbZygtTpvpIZk3" version="21.2.9" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-06-15T02:24:29.956Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.37" etag="oXUZKrf_OCL61CKCxtq4" version="21.2.9" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2389" dy="2038" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2604,6 +2604,12 @@
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-31" value="返回已备份的秘钥数量" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="432.5" y="445" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="txJrApA3H6D6tEuTt8AX-35" value="传入执照实体" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" vertex="1" parent="1">
+          <mxGeometry x="70" y="220" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="txJrApA3H6D6tEuTt8AX-36" value="传入持照人ID" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" vertex="1" parent="1">
+          <mxGeometry x="480" y="210" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
