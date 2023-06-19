@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-19T06:25:32.113Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43" etag="kNOkNvoklWud71TahVBl" version="21.5.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-06-19T06:41:22.528Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43" etag="wxHc9XYxdrxIOTi4U1Im" version="21.5.0" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2410,7 +2410,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Y2m-r75ibcdiWNGQc2ZS" name="电子招投标">
-    <mxGraphModel dx="2074" dy="1148" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2366" dy="1148" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2501,16 +2501,11 @@
         <mxCell id="aXzs8Yh24sB93xMLFL81-13" value="更新执照人信息" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="22.5" y="570" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="aXzs8Yh24sB93xMLFL81-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aXzs8Yh24sB93xMLFL81-19" target="aXzs8Yh24sB93xMLFL81-8" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="215" y="660" />
-              <mxPoint x="68" y="660" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aXzs8Yh24sB93xMLFL81-19" target="C_3ZEIAxpsedcs_FzfHN-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aXzs8Yh24sB93xMLFL81-19" value="新建执照人" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="170" y="480" width="90" height="40" as="geometry" />
+        <mxCell id="aXzs8Yh24sB93xMLFL81-19" value="利用SM3计算统一社会信用代码+appID+openID+role的哈希值，并转换为16进制，作为HOLDER_ID" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="475" width="130" height="80" as="geometry" />
         </mxCell>
         <mxCell id="aXzs8Yh24sB93xMLFL81-26" value="查询密钥备份（C.1）" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" parent="1" vertex="1">
           <mxGeometry x="440" y="70" width="250" height="40" as="geometry" />
@@ -2871,6 +2866,17 @@
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-147" value="把解密后的客户端秘钥插入或更新秘钥表TBL_KEY_INFO" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="806.5" y="415" width="174.5" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-1" target="aXzs8Yh24sB93xMLFL81-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="215" y="660" />
+              <mxPoint x="68" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-1" value="插入新的持照人信息" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="585" width="90" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
