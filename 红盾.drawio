@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-19T07:50:35.554Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43" etag="iLNmNiYN78s6AppwZqcY" version="21.5.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-06-19T08:00:04.831Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43" etag="m705wihJYXWHukhaZWot" version="21.5.0" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2528,8 +2528,8 @@
         <mxCell id="aXzs8Yh24sB93xMLFL81-32" value="生成加密密钥：I3-E.2&lt;br&gt;/enc/create" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" parent="1" vertex="1">
           <mxGeometry x="560" y="1000" width="250" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="aXzs8Yh24sB93xMLFL81-33" value="加密密钥解密：I3:E.3" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" parent="1" vertex="1">
-          <mxGeometry x="1116" y="1000" width="250" height="40" as="geometry" />
+        <mxCell id="aXzs8Yh24sB93xMLFL81-33" value="加密密钥解密：I3-E.3&lt;br&gt;/enc/dec" style="rounded=0;whiteSpace=wrap;html=1;fontSize=21;fillColor=none;strokeColor=none;align=left;" parent="1" vertex="1">
+          <mxGeometry x="1116" y="990" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-2" value="根据以下信息查询TBL_HOLDER_INFO表：&lt;br&gt;- 统一社会信用代码&lt;br&gt;- appID&lt;br&gt;- openID&lt;br&gt;- role&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" parent="1" vertex="1">
           <mxGeometry x="95" y="292.5" width="240" height="80" as="geometry" />
@@ -2607,7 +2607,7 @@
           <mxGeometry x="480" y="210" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-63" value="&lt;div&gt;P1：客户端公钥，作为完整公钥的一部分&lt;/div&gt;&lt;div&gt;PIN_ID：PIN码ID&lt;/div&gt;&lt;div&gt;PIN：PIN码&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" parent="1" vertex="1">
-          <mxGeometry x="626.25" y="1115" width="253.75" height="50" as="geometry" />
+          <mxGeometry x="626.25" y="1115" width="233.75" height="50" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-66" target="txJrApA3H6D6tEuTt8AX-76" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -2689,111 +2689,6 @@
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-103" value="将ID、加密过的服务端私钥、完整公钥、硬件信息存入SOFTWARE_ENCRYPTKEY_INFO" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="487.5" y="1654" width="242.5" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-106" value="&lt;div&gt;&quot;P1&quot;:&quot;&quot;,//客户端公钥，作为完整公钥的一部分&lt;/div&gt;&lt;div&gt;&quot;PIN_ID&quot;:&quot;&quot;,//PIN码ID&lt;/div&gt;&lt;div&gt;&quot;PIN&quot;:&quot;&quot;,//PIN码&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" parent="1" vertex="1">
-          <mxGeometry x="1217.5" y="1104" width="253.75" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-108" target="txJrApA3H6D6tEuTt8AX-113" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-108" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1151.25" y="1069" width="95" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-113" target="txJrApA3H6D6tEuTt8AX-118" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-110" value="通过" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="txJrApA3H6D6tEuTt8AX-109" vertex="1" connectable="0">
-          <mxGeometry x="0.3333" y="2" relative="1" as="geometry">
-            <mxPoint x="-2" y="-13" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-113" target="txJrApA3H6D6tEuTt8AX-119" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1421.25" y="1169" />
-              <mxPoint x="1421.25" y="1899" />
-              <mxPoint x="1199.25" y="1899" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-112" value="失败" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="txJrApA3H6D6tEuTt8AX-111" vertex="1" connectable="0">
-          <mxGeometry x="-0.8673" y="-3" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-113" value="验证签名" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1157.5" y="1139" width="82.5" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-118" target="txJrApA3H6D6tEuTt8AX-119" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1346.25" y="1369" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1351.25" y="1279" />
-              <mxPoint x="1351.25" y="1899" />
-              <mxPoint x="1199.25" y="1899" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-115" value="失败" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="txJrApA3H6D6tEuTt8AX-114" vertex="1" connectable="0">
-          <mxGeometry x="-0.7834" y="-1" relative="1" as="geometry">
-            <mxPoint x="20" y="-1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-118" target="txJrApA3H6D6tEuTt8AX-125" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-117" value="通过" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="txJrApA3H6D6tEuTt8AX-116" vertex="1" connectable="0">
-          <mxGeometry x="-0.212" y="3" relative="1" as="geometry">
-            <mxPoint x="-3" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-118" value="校验PIN码" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1157.5" y="1249" width="82.5" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-119" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="1151.25" y="1911" width="95" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-121" target="txJrApA3H6D6tEuTt8AX-131" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-121" value="调用密码机对服务端私钥加密" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1153.75" y="1559" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-123" target="txJrApA3H6D6tEuTt8AX-119" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-123" value="返回ID、完整公钥至客户端" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1153.75" y="1821" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-124" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="txJrApA3H6D6tEuTt8AX-125" target="txJrApA3H6D6tEuTt8AX-127" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-125" value="P1格式化" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1153.75" y="1359" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="txJrApA3H6D6tEuTt8AX-127" target="txJrApA3H6D6tEuTt8AX-129" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-127" value="调用密码机生成随机数pucRand" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1153.75" y="1419" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-128" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="txJrApA3H6D6tEuTt8AX-129" target="txJrApA3H6D6tEuTt8AX-121" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-129" value="调用SDF_GenerateKeyPair_ECC_PartTwo&lt;br&gt;生成服务端私钥和完整公钥" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1070" y="1479" width="257.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-131" target="txJrApA3H6D6tEuTt8AX-133" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-131" value="对完整公钥做SM3杂凑生成秘钥表ID" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1132.5" y="1639" width="132.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-133" target="txJrApA3H6D6tEuTt8AX-123" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="txJrApA3H6D6tEuTt8AX-133" value="将ID、加密过的服务端私钥、完整公钥、硬件信息存入SOFTWARE_ENCRYPTKEY_INFO" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1077.5" y="1723" width="242.5" height="40" as="geometry" />
         </mxCell>
         <mxCell id="txJrApA3H6D6tEuTt8AX-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="txJrApA3H6D6tEuTt8AX-135" target="txJrApA3H6D6tEuTt8AX-140" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2962,7 +2857,7 @@
           <mxGeometry x="1529.75" y="210" width="173.75" height="20" as="geometry" />
         </mxCell>
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-33" value="&lt;div&gt;ID：秘钥ID&lt;/div&gt;&lt;div&gt;T1：密文&lt;/div&gt;&lt;div&gt;PIN_ID：PIN码ID&lt;/div&gt;&lt;div&gt;PIN：PIN码&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" vertex="1" parent="1">
-          <mxGeometry x="182" y="1135" width="157.5" height="75" as="geometry" />
+          <mxGeometry x="182" y="1135" width="128" height="75" as="geometry" />
         </mxCell>
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-63" target="C_3ZEIAxpsedcs_FzfHN-68">
           <mxGeometry relative="1" as="geometry" />
@@ -3047,6 +2942,93 @@
         </mxCell>
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-84" value="T1格式化" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="85.63" y="1490" width="108.75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-91" value="&lt;div&gt;ID：秘钥ID&lt;/div&gt;&lt;div&gt;T1：密文&lt;/div&gt;&lt;div&gt;PIN_ID：PIN码ID&lt;/div&gt;&lt;div&gt;PIN：PIN码&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontColor=#A9C4EB;" vertex="1" parent="1">
+          <mxGeometry x="1227.91" y="1105" width="128" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-93" target="C_3ZEIAxpsedcs_FzfHN-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-93" value="开始" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1139.16" y="1080" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-98" target="C_3ZEIAxpsedcs_FzfHN-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-95" value="通过" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="C_3ZEIAxpsedcs_FzfHN-94">
+          <mxGeometry x="0.3333" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-98" target="C_3ZEIAxpsedcs_FzfHN-104">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1408.91" y="1180" />
+              <mxPoint x="1408.91" y="1740" />
+              <mxPoint x="1186.91" y="1740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-97" value="失败" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="C_3ZEIAxpsedcs_FzfHN-96">
+          <mxGeometry x="-0.8673" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-98" value="校验PIN码" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1145.41" y="1150" width="82.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-103" target="C_3ZEIAxpsedcs_FzfHN-104">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1334.16" y="1380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1338.91" y="1290" />
+              <mxPoint x="1338.91" y="1740" />
+              <mxPoint x="1186.91" y="1740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-100" value="不存在" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="C_3ZEIAxpsedcs_FzfHN-99">
+          <mxGeometry x="-0.7834" y="-1" relative="1" as="geometry">
+            <mxPoint x="-29" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-103" target="C_3ZEIAxpsedcs_FzfHN-110">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-102" value="存在" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="C_3ZEIAxpsedcs_FzfHN-101">
+          <mxGeometry x="-0.212" y="3" relative="1" as="geometry">
+            <mxPoint x="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-103" value="加密秘钥是否存在" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1145.41" y="1260" width="82.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-104" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1138.41" y="1802" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-106" target="C_3ZEIAxpsedcs_FzfHN-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-106" value="用服务端私钥对T1解密&lt;br&gt;得到解密后的结果T2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1108.7900000000002" y="1540" width="154.25" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-108" target="C_3ZEIAxpsedcs_FzfHN-104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-108" value="返回T2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1141.66" y="1663" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-110" target="C_3ZEIAxpsedcs_FzfHN-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-110" value="调用密码机解密D2_CIPHER_TEXT字段&lt;br&gt;获得服务端私钥" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1073.1000000000001" y="1370" width="227.12" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-112" target="C_3ZEIAxpsedcs_FzfHN-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-112" value="T1格式化" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1131.5400000000002" y="1460" width="108.75" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
