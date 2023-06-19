@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-19T07:27:41.432Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43" etag="w9Rl3Wkblq9Xa6vMexeC" version="21.5.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-06-19T07:31:28.669Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.43" etag="fsh1ZFUoCS7jdTULH7vu" version="21.5.0" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3002,9 +3002,9 @@
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-68" target="C_3ZEIAxpsedcs_FzfHN-74">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="363.25" y="1210" />
-              <mxPoint x="363.25" y="1940" />
-              <mxPoint x="141.25" y="1940" />
+              <mxPoint x="363" y="1210" />
+              <mxPoint x="363" y="1770" />
+              <mxPoint x="141" y="1770" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -3020,9 +3020,9 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="288.25" y="1410" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="293.25" y="1320" />
-              <mxPoint x="293.25" y="1940" />
-              <mxPoint x="141.25" y="1940" />
+              <mxPoint x="293" y="1320" />
+              <mxPoint x="293" y="1770" />
+              <mxPoint x="141" y="1770" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -3043,49 +3043,31 @@
           <mxGeometry x="99.5" y="1290" width="82.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-74" value="结束" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="93.25" y="1952" width="95" height="30" as="geometry" />
+          <mxGeometry x="92.5" y="1832" width="95" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-76" target="C_3ZEIAxpsedcs_FzfHN-86">
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-76" target="C_3ZEIAxpsedcs_FzfHN-78">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-76" value="调用密码机对服务端私钥加密" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="95.75" y="1600" width="90" height="30" as="geometry" />
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-76" value="用服务端私钥对T1解密&lt;br&gt;得到解密后的结果T2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="62.88" y="1570" width="154.25" height="30" as="geometry" />
         </mxCell>
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-78" target="C_3ZEIAxpsedcs_FzfHN-74">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-78" value="返回ID、完整公钥至客户端" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="95.75" y="1862" width="90" height="30" as="geometry" />
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-78" value="返回T2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95.75" y="1693" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-80" target="C_3ZEIAxpsedcs_FzfHN-82">
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-80" target="C_3ZEIAxpsedcs_FzfHN-84">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-80" value="P1格式化" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="95.75" y="1400" width="90" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-82" target="C_3ZEIAxpsedcs_FzfHN-84">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-82" value="调用密码机生成随机数pucRand" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="95.75" y="1460" width="90" height="30" as="geometry" />
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-80" value="调用密码机解密D2_CIPHER_TEXT字段&lt;br&gt;获得服务端私钥" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="27.190000000000005" y="1400" width="227.12" height="40" as="geometry" />
         </mxCell>
         <mxCell id="C_3ZEIAxpsedcs_FzfHN-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-84" target="C_3ZEIAxpsedcs_FzfHN-76">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-84" value="调用SDF_GenerateKeyPair_ECC_PartTwo&lt;br&gt;生成服务端私钥和完整公钥" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="12" y="1520" width="257.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-86" target="C_3ZEIAxpsedcs_FzfHN-88">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-86" value="对完整公钥做SM3杂凑生成秘钥表ID" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="74.5" y="1680" width="132.5" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C_3ZEIAxpsedcs_FzfHN-88" target="C_3ZEIAxpsedcs_FzfHN-78">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="C_3ZEIAxpsedcs_FzfHN-88" value="将ID、加密过的服务端私钥、完整公钥、硬件信息存入SOFTWARE_ENCRYPTKEY_INFO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="19.5" y="1764" width="242.5" height="40" as="geometry" />
+        <mxCell id="C_3ZEIAxpsedcs_FzfHN-84" value="T1格式化" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="85.63" y="1490" width="108.75" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
