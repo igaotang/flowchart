@@ -1,9 +1,33 @@
-<mxfile host="app.diagrams.net" modified="2023-07-25T06:24:51.313Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" version="21.5.0" etag="y0Y3d4nxIlNKUTHWHBfz" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-25T06:29:41.688Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="Vu_pHThgoG6HEr06OqsV" version="21.5.0" type="github">
   <diagram name="第 1 页" id="LiB1tWwnnF5XUovUIlr9">
-    <mxGraphModel>
+    <mxGraphModel dx="2074" dy="1148" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-1" value="SQL" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="200" y="70" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-2" value="Table API" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="130" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-3" value="DataStream/DataSet API" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="100" y="190" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-4" value="有状态流处理" style="rounded=0;whiteSpace=wrap;html=1;fontSize=17;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-5" value="最高层语言" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-6" value="声明式领域专用语言" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-7" value="核心API" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jgvuaPsPRs78ekDjd8Ct-8" value="底层API" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontStyle=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="250" width="100" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
