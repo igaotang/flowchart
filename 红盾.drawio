@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T02:40:59.127Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="N0ndPgasCb5Zs3_txAhP" version="21.6.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-07-27T03:23:26.587Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="-TJSiAXTqTCRNj-QDYrA" version="21.6.5" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3334,22 +3334,22 @@
         <mxCell id="SE9Fno4PhoEkpcuLPlKi-115" value="协同库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
           <mxGeometry x="110" y="412" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-116" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-116" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;fillColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="247" y="450" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-118" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-118" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;fillColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="247" y="284" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-119" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-119" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;fillColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="247" y="620" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-120" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-120" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;fillColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="1285" y="448" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-121" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-121" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;fillColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="1285" y="282" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-122" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-122" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;fillColor=#FFD966;" vertex="1" parent="1">
           <mxGeometry x="1285" y="618" width="70" height="20" as="geometry" />
         </mxCell>
       </root>
