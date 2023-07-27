@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T00:36:49.493Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="RQPW0M6-pZ00K9UIiufC" version="21.6.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-07-27T00:42:29.982Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="jPKurmfNF6uzEMppoPuI" version="21.6.5" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3094,13 +3094,13 @@
         <mxCell id="LLjc0jxfPp3QEb4TyOxT-14" value="SeaTunnel Engine" style="rounded=1;whiteSpace=wrap;html=1;arcSize=5;verticalAlign=top;fontSize=19;fillColor=#64b5f6;strokeColor=#6c8ebf;" parent="SE9Fno4PhoEkpcuLPlKi-6" vertex="1">
           <mxGeometry width="498" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-1" value="Source" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-6">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-1" value="Source" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;fontStyle=1" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-6">
           <mxGeometry x="14" y="64" width="112" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-2" value="Transform" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-6">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-2" value="Transform" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;fontStyle=1" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-6">
           <mxGeometry x="192" y="64" width="112" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-3" value="Sink" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-6">
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-3" value="Sink" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;fontStyle=1" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-6">
           <mxGeometry x="372" y="64" width="112" height="100" as="geometry" />
         </mxCell>
         <mxCell id="SE9Fno4PhoEkpcuLPlKi-7" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -3159,6 +3159,39 @@
         </mxCell>
         <mxCell id="SE9Fno4PhoEkpcuLPlKi-26" value="Translation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#f57d01;fontStyle=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="816" y="540" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-27" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="160" width="140" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-28" value="HDFS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="170" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-29" value="Hive" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="221" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-30" value="MySQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="273" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-31" value="达梦" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="327" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-32" value="IotDB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="380" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-33" value="Kafka" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="485" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-34" value="LocalFile" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="540" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-35" value="Socket" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="600" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-36" value="CDC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="646" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-37" value="Oracle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2196f3;fontColor=#000000;strokeColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="225" y="430" width="110" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
