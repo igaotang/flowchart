@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-27T01:47:37.721Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="KtNAlbcb-k8TJAHVbNUq" version="21.6.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-07-27T02:40:59.127Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="N0ndPgasCb5Zs3_txAhP" version="21.6.5" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3244,50 +3244,113 @@
         <mxCell id="SE9Fno4PhoEkpcuLPlKi-54" value="" style="html=1;shadow=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=18;direction=east;notch=0;fillColor=#2196F3;" vertex="1" parent="1">
           <mxGeometry x="1068" y="440" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-56" value="DM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;verticalAlign=top;arcSize=11;" vertex="1" parent="1">
-          <mxGeometry x="70" y="102" width="210" height="608" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-100" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="25" y="160" width="210" height="553" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-58" value="经营主体受理库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="150" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-56" value="DM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;verticalAlign=top;arcSize=11;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry width="210" height="553" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-63" value="经营主体审核库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="185" y="150" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-58" value="经营主体受理库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="15" y="43" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-64" value="营业执照签发库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="229" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-63" value="经营主体审核库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="115" y="43" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-65" value="投资任职查询库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="185" y="229" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-64" value="营业执照签发库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="115" y="261" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-66" value="营业执照签发库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="319" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-65" value="投资任职查询库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="115" y="115" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-67" value="营业执照验证库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="185" y="319" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-67" value="营业执照验证库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="115" y="188" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-68" value="应用中心" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="390" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-68" value="应用中心" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="15" y="412" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-69" value="营业执照亮照库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="530" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-69" value="营业执照亮照库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="15" y="261" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-70" value="服务专区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="185" y="390" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-70" value="服务专区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="16" y="337" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-71" value="经营主体查询库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="460" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-71" value="经营主体查询库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="12" y="115" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-72" value="授权库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="185" y="460" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-72" value="授权库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="110" y="337" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-73" value="电子营业执照库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="180" y="530" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-73" value="电子营业执照库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="15" y="188" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-74" value="运营分析库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="85" y="611" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-74" value="运营分析库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="15" y="487" width="175" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="SE9Fno4PhoEkpcuLPlKi-75" value="协同库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="180" y="611" width="80" height="55" as="geometry" />
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-75" value="协同库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-100">
+          <mxGeometry x="110" y="412" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-101" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1372" y="160" width="210" height="553" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-102" value="GuassDB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;verticalAlign=top;arcSize=11;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry width="210" height="553" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-103" value="经营主体受理库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="15" y="43" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-104" value="经营主体审核库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="115" y="43" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-105" value="营业执照签发库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="115" y="261" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-106" value="投资任职查询库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="115" y="115" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-107" value="营业执照验证库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="115" y="188" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-108" value="应用中心" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="15" y="412" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-109" value="营业执照亮照库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="15" y="261" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-110" value="服务专区" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="16" y="337" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-111" value="经营主体查询库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="12" y="115" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-112" value="授权库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="110" y="337" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-113" value="电子营业执照库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="15" y="188" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-114" value="运营分析库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="15" y="487" width="175" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-115" value="协同库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#FFD966;dashed=1;strokeWidth=2;fontSize=16;" vertex="1" parent="SE9Fno4PhoEkpcuLPlKi-101">
+          <mxGeometry x="110" y="412" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-116" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="247" y="450" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-118" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="247" y="284" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-119" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="247" y="620" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-120" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="448" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-121" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="282" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SE9Fno4PhoEkpcuLPlKi-122" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=29;notch=0;strokeColor=#FFD966;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="618" width="70" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
