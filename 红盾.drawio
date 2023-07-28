@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-28T07:30:07.151Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="Z3UbqTWkItz4g9dJm0Oq" version="21.6.5" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-07-28T07:47:26.958Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183" etag="GAmWm2ETN3V1i7dcVNZZ" version="21.6.5" type="github" pages="5">
   <diagram id="gaf1Xc8oLgJsTNjU48Kx" name="电子营业执照运营分析">
     <mxGraphModel dx="2901" dy="2317" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3050,7 +3050,7 @@
           <mxGeometry x="260" y="1640" width="946" height="593" as="geometry" />
         </mxCell>
         <mxCell id="SE9Fno4PhoEkpcuLPlKi-4" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="556" y="70" width="500" height="70" as="geometry" />
+          <mxGeometry x="556" y="84" width="500" height="70" as="geometry" />
         </mxCell>
         <mxCell id="LLjc0jxfPp3QEb4TyOxT-6" value="Web" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;strokeWidth=1;fontSize=13;arcSize=7;" parent="SE9Fno4PhoEkpcuLPlKi-4" vertex="1">
           <mxGeometry width="500" height="70" as="geometry" />
