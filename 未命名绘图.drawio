@@ -1,11 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2023-08-19T11:53:59.521Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="DZ7wS_el8h2ycOlKaNSX" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-25T00:31:27.686Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="G9V8N4VYq9XA4OfY5VZ9" version="21.6.8" type="github">
   <diagram name="第 1 页" id="1H4gfiZ7DywXi5FzGFm4">
     <mxGraphModel dx="818" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="EsyHLlyyGyN2LImnXfp3-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.ibm.com/docs/zh/SSQNUZ_4.6.x/wsj/model/images/wos-custom-how-works.png;" vertex="1" parent="1">
-          <mxGeometry x="60" y="20" width="1148" height="596" as="geometry" />
+        <mxCell id="EsyHLlyyGyN2LImnXfp3-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.ibm.com/docs/zh/SSQNUZ_4.6.x/wsj/model/images/wos-custom-how-works.png;" parent="1" vertex="1">
+          <mxGeometry x="30" y="10" width="558.62" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="PaLhSKKyWPUq4x4uDszC-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://pic2.zhimg.com/v2-0cd61dba7066fca9f4c1cc0e29036045_r.jpg;" vertex="1" parent="1">
+          <mxGeometry x="620" y="20" width="940" height="325.08" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
